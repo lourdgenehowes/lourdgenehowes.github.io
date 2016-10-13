@@ -12,15 +12,70 @@
             </a>
         </div>
     </div><!-- /.container-fluid -->
-    <div class="container container-menu">
+    <div class="container container-menu cd-morph-dropdown">
+
         <div class="collapse navbar-collapse" id="menu-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="main-nav nav navbar-nav">
                 {% for menu in site.navbar-menu %}
-                <li {% if first %} class="navbar-menu active"{% else %} class="navbar-menu"{% endif %}>
-                    <a  class="navbar-link" href="{{ menu.slug-link }}">{{ menu.title | upcase }}</a>
+                <li {% if first %} class="navbar-menu has-dropdown active"{% else %} class="navbar-menu has-dropdown"{% endif %}>
+                    <a href="#{{ menu.title | downcase }}" class="navbar-link" href="{{ menu.slug-link }}">{{ menu.title | upcase }}</a>
                 </li>
                 {% endfor %}
             </ul>
         </div><!-- /.navbar-collapse -->
+
+        <!--<nav class="main-nav">-->
+            <!--<ul>-->
+                <!--<li class="has-dropdown links" data-content="pricing">-->
+                    <!--<a href="#0">Pricing</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</nav>-->
+
+        <div class="morph-dropdown-wrapper">
+            <div class="dropdown-list">
+                <ul>
+                    {% for menu in site.navbar-menu %}
+                    <li id="pricing" class="dropdown links">
+                        <a href="#{{ menu.title }}" class="label">Pricing</a>
+                        <div class="content">
+                            <ul>
+                                <li>
+                                    <h2>Services</h2>
+                                    <ul class="links-list">
+                                        <li><a href="#0">Logo Design</a></li>
+                                        <li><a href="#0">Branding</a></li>
+                                        <li><a href="#0">Web Design</a></li>
+                                        <li><a href="#0">iOS</a></li>
+                                        <li><a href="#0">Android</a></li>
+                                        <li><a href="#0">HTML/CSS/JS</a></li>
+                                        <li><a href="#0">Packaging</a></li>
+                                        <li><a href="#0">Mobile</a></li>
+                                        <li><a href="#0">UI/UX</a></li>
+                                        <li><a href="#0">Prototyping</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <h2>Projects</h2>
+                                    <ul class="links-list">
+                                        <li><a href="#0">Logo Design</a></li>
+                                        <li><a href="#0">Branding</a></li>
+                                        <li><a href="#0">Web Design</a></li>
+                                        <li><a href="#0">iOS</a></li>
+                                        <li><a href="#0">Android</a></li>
+                                        <li><a href="#0">HTML/CSS/JS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="bg-layer" aria-hidden="true"></div>
+            </div> <!-- dropdown-list -->
+        </div> <!-- morph-dropdown-wrapper -->
+
+
     </div>
 </nav>
