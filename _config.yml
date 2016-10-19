@@ -12,17 +12,17 @@ markdown: kramdown
 collections:
   product:
     output: true
-    permalink: products/:path/
+    permalink: /product/:path/
 
 navbar-menu:
-  - title: Accessories
-    slug-link: accessories
+#  - title: Accessories
+#    slug-link: accessories
 
   - title: Cheeks
-    slug-link: cheeks
+    slug-link: cheek
 
   - title: Eyes
-    slug-link: eyes
+    slug-link: eye
 
   - title: Face
     slug-link: face
@@ -30,13 +30,13 @@ navbar-menu:
   - title: Lips
     slug-link: lips
 
-  - title: Makeup Bags
-    slug-link: makeupbag
+#  - title: Makeup Bags
+#    slug-link: makeupbag
 
   - title: Skin Care
-    slug-link: makeupbag
+    slug-link: skin-care
 
   - title: "Tools & Brushes"
-    slug-link: tools
+    slug-link: tool
 
 

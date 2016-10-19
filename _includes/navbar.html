@@ -24,11 +24,8 @@
                         <a href="#{{ menu.slug-link }}">{{ menu.title }}</a>
                     </li>
                     {% endfor %}
-
-
                 </ul>
             </div>
-
             <div class="morph-dropdown-wrapper">
                 <div class="dropdown-list">
                     <ul>
@@ -37,16 +34,14 @@
                             <a href="#0" class="label">{{ menu-item.title }}</a>
                             <div class="content">
                                 <ul class="links-list">
-                                    <li><a href="#0">Logo Design</a></li>
-                                    <li><a href="#0">Branding</a></li>
-                                    <li><a href="#0">Web Design</a></li>
-                                    <li><a href="#0">iOS</a></li>
-                                    <li><a href="#0">Android</a></li>
-                                    <li><a href="#0">HTML/CSS/JS</a></li>
-                                    <li><a href="#0">Packaging</a></li>
-                                    <li><a href="#0">Mobile</a></li>
-                                    <li><a href="#0">UI/UX</a></li>
-                                    <li><a href="#0">Prototyping</a></li>
+                                    {% for product in site.product %}
+                                    {% if product.category == menu-item.slug-link %}
+                                    <li>
+                                        <a href="#0">{{ product.product-name }}</a>
+                                    </li>
+                                    {% endif %}
+                                    {% endfor %}
+
                                 </ul>
                             </div>
                         </li>

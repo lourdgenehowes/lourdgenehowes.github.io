@@ -1,6 +1,6 @@
 ---
 layout: per-product
-category: tool-brushes
+category: tool
 brand-name: "Z•PALETTE"
 product-name: "Large Palette Lavender"
 price: "20"
