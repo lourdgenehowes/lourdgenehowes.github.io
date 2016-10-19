@@ -33,6 +33,9 @@ navbar-menu:
   - title: Makeup Bags
     slug-link: makeupbag
 
+  - title: Skin Care
+    slug-link: makeupbag
+
   - title: "Tools & Brushes"
     slug-link: tools
 
