@@ -1,0 +1,13 @@
+---
+layout: per-product
+category: face
+brand-name: "Becca"
+product-name: "Shimmering Skin Perfector Pressed"
+price: "38"
+product-cover: http://res.cloudinary.com/lourdgene/image/upload/v1476858610/face/Shimmering%20Skin%20Perfector%20Pressed/pressed-pearl550x550.jpg
+product-image:
+    - image: http://res.cloudinary.com/lourdgene/image/upload/v1476858610/face/Shimmering%20Skin%20Perfector%20Pressed/pressed-pearl550x550.jpg
+
+---
+A sequel to the cult favorite liquid BECCA Shimmering Skin Perfector, this creamy powder luminizer is like crushed gemstones in a compact.
+

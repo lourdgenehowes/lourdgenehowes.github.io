@@ -10,6 +10,9 @@ markdown: kramdown
 
 #Collections
 collections:
+  product:
+    output: true
+    permalink: products/:path/
 
 navbar-menu:
   - title: Accessories
