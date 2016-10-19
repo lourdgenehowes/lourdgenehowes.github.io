@@ -63,11 +63,14 @@ nav
         .brand-logo
           height: auto
 .category-menu-container
+  min-height: 50px
   position: absolute
-  max-width: 100%
-
+  width: 100%
+  left: 0
+  right: 0
   margin-left: auto
   margin-right: auto
+  background-color: #f5f5f5
 //Menu on hover
 .cd-morph-dropdown
   &::before
@@ -79,8 +82,8 @@ nav
     position: absolute
     top: 0
     right: 0
-    height: 60px
-    width: 60px
+    height: 50px
+    width: 50px
     /* replace text with icon
     overflow: hidden
     text-indent: 100%
@@ -226,21 +229,22 @@ nav
     .nav-trigger
       display: none
     .main-nav
-      display: inline-block
-      > ul > li
-        display: inline-block
-        float: left
-        > a
-          display: block
-          padding: 0 1.8em
-          height: 70px
-          line-height: 70px
-          color: #FFFFFF
-          font-size: 1.8rem
-          -webkit-font-smoothing: antialiased
-          -moz-osx-font-smoothing: grayscale
-          -webkit-transition: opacity .2s
-          transition: opacity .2s
+      display: table
+      margin-left: auto
+      margin-right: auto
+      > ul
+        position: relative
+        display: block
+        > li
+          width: 12.5%
+          display: inline-block
+          float: left
+          > a
+            padding-top: 17px
+            padding-bottom: 17px
+            text-align: center
+            display: block
+            color: #585858
     &.is-dropdown-visible .main-nav > ul > li
       > a
         /* main navigation hover effect - on hover, reduce opacity of elements not hovered over
@@ -250,7 +254,7 @@ nav
     .morph-dropdown-wrapper
       /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden
       display: block
-      top: 58px
+      top: 50px
       /* overwrite mobile style
       width: auto
       padding: 0

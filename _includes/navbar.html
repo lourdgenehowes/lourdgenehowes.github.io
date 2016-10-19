@@ -13,33 +13,32 @@
             </a>
         </div>
     </div><!-- /.container-fluid -->
-    <div class="container category-menu-container no-gutter">
+    <div class="category-menu-container">
         <header class="cd-morph-dropdown">
             <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
+            <div class="clearfix main-nav">
+                <ul class="clearfix container no-gutter">
 
-            <nav class="main-nav">
-                <ul>
-                    <li class="has-dropdown links" data-content="pricing">
-                        <a href="#0">Pricing</a>
+                    {% for menu in site.navbar-menu %}
+                    <li class="has-dropdown links" data-content="{{ menu.slug-link }}">
+                        <a href="#{{ menu.slug-link }}">{{ menu.title }}</a>
                     </li>
+                    {% endfor %}
 
-                    <li class="has-dropdown button" data-content="contact">
-                        <a href="#0">Contact</a>
-                    </li>
+
                 </ul>
-            </nav>
+            </div>
 
             <div class="morph-dropdown-wrapper">
                 <div class="dropdown-list">
                     <ul>
-                        <li id="pricing" class="dropdown links">
-                            <a href="#0" class="label">Pricing</a>
-
+                        {% for menu-item in site.navbar-menu %}
+                        <li id="{{ menu-item.slug-link }}" class="dropdown links">
+                            <a href="#0" class="label">{{ menu-item.title }}</a>
                             <div class="content">
                                 <ul>
                                     <li>
                                         <h2>Services</h2>
-
                                         <ul class="links-list">
                                             <li><a href="#0">Logo Design</a></li>
                                             <li><a href="#0">Branding</a></li>
@@ -53,39 +52,10 @@
                                             <li><a href="#0">Prototyping</a></li>
                                         </ul>
                                     </li>
-
-                                    <li>
-                                        <h2>Projects</h2>
-
-                                        <ul class="links-list">
-                                            <li><a href="#0">Logo Design</a></li>
-                                            <li><a href="#0">Branding</a></li>
-                                            <li><a href="#0">Web Design</a></li>
-                                            <li><a href="#0">iOS</a></li>
-                                            <li><a href="#0">Android</a></li>
-                                            <li><a href="#0">HTML/CSS/JS</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                         </li>
-
-                        <li id="contact" class="dropdown button">
-                            <a href="#0" class="label">Contact</a>
-
-                            <div class="content">
-                                <ul class="links-list">
-                                    <li><a href="#0">Link #1</a></li>
-                                    <li><a href="#0">Link #2</a></li>
-                                    <li><a href="#0">Link #3</a></li>
-                                    <li><a href="#0">Link #4</a></li>
-                                    <li><a href="#0">Link #5</a></li>
-                                    <li><a href="#0">Link #6</a></li>
-                                </ul>
-
-                                <a href="#0" class="btn">Get in Touch</a>
-                            </div>
-                        </li>
+                        {% endfor %}
                     </ul>
 
                     <div class="bg-layer" aria-hidden="true"></div>
