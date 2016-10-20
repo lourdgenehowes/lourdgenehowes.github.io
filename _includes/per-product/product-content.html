@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="section-container">
-        <div class="left-section col-md-6 no-gutter">
+    <div class="section-container clearfix">
+        <div class="left-section col-md-8 no-gutter">
             <ul class="cd-gallery">
                 <li>
                     <a href="#">
@@ -19,21 +19,18 @@
                             {% endif %}
 
                             {% endfor %}
-                            <!--<li class="move-right">-->
-                                <!--<img src="/img/test/ugmonk-tshirt-2.jpg" alt="Preview image">-->
-                            <!--</li>-->
-
-                            <!--<li>-->
-                                <!--<img src="/img/test/ugmonk-tshirt-3.jpg" alt="Preview image">-->
-                            <!--</li>-->
-
                         </ul> <!-- cd-item-wrapper -->
                     </a>
                 </li>
             </ul> <!-- cd-gallery -->
         </div>
-        <div class="right-section col-md-6 no-gutter">
-
+        <div class="right-section col-md-4 no-gutter">
+            <div class="product-details">
+                <span class="product-brand">{{ page.brand-name }}</span>
+                <span class="product-name">{{ page.product-name }}</span>
+                <span class="product-price">${{ page.price }}.00</span>
+                <span class="product-description">{{ page.content }}</span>
+            </div>
         </div>
     </div>
 </div>
