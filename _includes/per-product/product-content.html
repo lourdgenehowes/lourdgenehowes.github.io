@@ -1,9 +1,38 @@
 <div class="container">
     <div class="section-container">
-        <div class="left-section">
+        <div class="left-section col-md-6 no-gutter">
+            <ul class="cd-gallery">
+                <li>
+                    <a href="#">
+                        <ul class="cd-item-wrapper">
+                            {% assign counter = 0 %}
+                            {% for product-image in page.product-image %}
+                            {% assign counter = counter | plus: 1 %}
+                            {% if forloop.first  == true %}
+                            <li class="selected">
+                                <img class="center-block img-responsive" src="{{ product-image.image }}" alt="Preview image">
+                            </li>
+                            {% else %}
+                            <li {% if counter ==2 %} class="move-right" {% else %} {% endif %}>
+                                <img class="center-block img-responsive" src="{{ product-image.image }}" alt="Preview image">
+                            </li>
+                            {% endif %}
 
+                            {% endfor %}
+                            <!--<li class="move-right">-->
+                                <!--<img src="/img/test/ugmonk-tshirt-2.jpg" alt="Preview image">-->
+                            <!--</li>-->
+
+                            <!--<li>-->
+                                <!--<img src="/img/test/ugmonk-tshirt-3.jpg" alt="Preview image">-->
+                            <!--</li>-->
+
+                        </ul> <!-- cd-item-wrapper -->
+                    </a>
+                </li>
+            </ul> <!-- cd-gallery -->
         </div>
-        <div class="right-section">
+        <div class="right-section col-md-6 no-gutter">
 
         </div>
     </div>

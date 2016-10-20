@@ -6,6 +6,7 @@ product-name: "Eyes to Mesmerise Jean"
 price: "32"
 product-cover: http://res.cloudinary.com/lourdgene/image/upload/v1476872888/eye/eyes-to-mesmerise/cover-image.jpg
 product-image:
+    - image: http://res.cloudinary.com/lourdgene/image/upload/v1476872888/eye/eyes-to-mesmerise/cover-image.jpg
     - image: http://res.cloudinary.com/lourdgene/image/upload/v1476872918/eye/eyes-to-mesmerise/jean.jpg
     - image: http://res.cloudinary.com/lourdgene/image/upload/v1476872918/eye/eyes-to-mesmerise/jean-shade.jpg
 

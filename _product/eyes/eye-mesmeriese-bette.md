@@ -7,6 +7,7 @@ product-name: "Eyes to Mesmerise Bette"
 price: "32"
 product-cover: "http://res.cloudinary.com/lourdgene/image/upload/v1476872888/eye/eyes-to-mesmerise/cover-image.jpg"
 product-image:
+    - image: http://res.cloudinary.com/lourdgene/image/upload/v1476872888/eye/eyes-to-mesmerise/cover-image.jpg
     - image: http://res.cloudinary.com/lourdgene/image/upload/v1476862509/eye/eyes-to-mesmerise/eyes-to-mesmerise-bette550x550.jpg
     - image: http://res.cloudinary.com/lourdgene/image/upload/v1476872837/eye/eyes-to-mesmerise/bette-shade.jpg
 
