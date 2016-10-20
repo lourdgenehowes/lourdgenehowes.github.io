@@ -1,5 +1,6 @@
 ---
 layout: per-product
+best-seller: true
 category: face
 brand-name: "Becca"
 product-name: "Shimmering Skin Perfector Pressed"

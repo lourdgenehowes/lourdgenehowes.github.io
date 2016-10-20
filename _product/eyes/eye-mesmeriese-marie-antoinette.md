@@ -1,5 +1,6 @@
 ---
 layout: per-product
+new-arrival: true
 category: eye
 brand-name: "CHARLOTTE TILBURY"
 product-name: "Eyes to Mesmerise Marie Antoinette"

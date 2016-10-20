@@ -1,5 +1,6 @@
 ---
 layout: per-product
+new-arrival: true
 category: eyes
 brand-name: "Anastasia"
 product-name: "Dipbrow Pomade Ash Brown "

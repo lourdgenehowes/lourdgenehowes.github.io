@@ -1,5 +1,6 @@
 ---
 layout: per-product
+best-seller: true
 category: cheek
 brand-name: "Becca"
 product-name: "Beach Tint Dragon Fruit "

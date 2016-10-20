@@ -18,15 +18,24 @@
 {% include navbar.html %}
 {{ content }}
 
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/js/modernizr.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<!--<script type="text/javascript" src="/js/home.js"></script>-->
-
+<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
-  jQuery(document).ready(function($){
+  <!--OWL CAROUSEL-->
+  $('.owl-carousel').owlCarousel({
+    items: 4,
+    lazyLoad: true,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    animateOut: 'fadeOut',
+    margin: 0
+  });
+
+  $(document).ready(function($){
     function morphDropdown( element ) {
       this.element = element;
       this.mainNavigation = this.element.find('.main-nav');

@@ -1,5 +1,6 @@
 ---
 layout: per-product
+best-seller: true
 category: tool
 brand-name: "Z•PALETTE"
 product-name: "Large Palette Lavender"
