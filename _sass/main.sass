@@ -41,7 +41,7 @@ table
   padding-right: 0
 
 body
-  background-color: black
+  //background-color: black
 
 nav
   &.navbar-default
@@ -71,6 +71,7 @@ nav
   margin-left: auto
   margin-right: auto
   background-color: #f5f5f5
+  border-bottom: 1px solid #a7a7a7
 //Menu on hover
 .cd-morph-dropdown
   &::before
@@ -234,11 +235,13 @@ nav
           float: left
           > a
             display: block
+            outline: none
             color: #585858
-            font-size: 12px
+            font-size: 14px
             padding-top: 17px
             text-align: center
             padding-bottom: 17px
+            text-decoration: none
             text-transform: uppercase
     &.is-dropdown-visible .main-nav > ul > li
       > a
