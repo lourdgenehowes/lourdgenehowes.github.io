@@ -1,7 +1,8 @@
 <div class="container">
     {% assign counter = 0%}
     {% for product-category in site.navbar-menu %}
-    <section id="{{ product-category.slug-link }}" class="section-container">
+    <span id="{{ product-category.slug-link }}-link" class="anchor-hide"></span>
+    <div class="section-container">
         <div class="section-header">
             <h2 class="header">{{ product-category.title }}</h2>
         </div>
@@ -10,7 +11,9 @@
             {% if product-item.category == product-category.slug-link %}
             <a href="{{ product-item.url }}" class="item col-lg-4">
                 <div class="section-image">
-                    <img class="image b-lazy center-block" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ product-item.product-cover }}"/>
+                    <img class="image b-lazy center-block"
+                         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                         data-src="{{ product-item.product-cover }}"/>
                 </div>
                 <div class="caption clearfix">
                     <span class="section-brand">{{ product-item.brand-name }}</span>
@@ -21,7 +24,7 @@
             {% endif %}
             {% endfor %}
         </div>
-    </section>
+    </div>
     <hr/>
     {% endfor %}
 </div>
