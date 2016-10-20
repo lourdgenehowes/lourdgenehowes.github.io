@@ -6,6 +6,7 @@ product-name: "Dipbrow Pomade Caramel"
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg
 product-image:
+    - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg
     - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/pomade-caramel550x550.jpg
     - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/caramel.jpg
 ---

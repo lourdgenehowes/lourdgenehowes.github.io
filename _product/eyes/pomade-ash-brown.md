@@ -7,6 +7,7 @@ product-name: "Dipbrow Pomade Ash Brown "
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg
 product-image:
+    - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg
     - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/pomade-ash-brown550x550.jpg
     - image: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/ash-brown-shade.jpg
 ---
