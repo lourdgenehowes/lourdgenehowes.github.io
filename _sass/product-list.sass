@@ -1,16 +1,23 @@
 #product-list
+  position: relative
   .section-container
-    position: relative
+    margin-top: 60px
+    margin-bottom: 60px
     .section-header
       .header
-        text-align: left
+        font-size: 20px
+        font-weight: bold
     .section-content
+      margin-top: 30px
       .item
+        text-decoration: none
+        outline: none
+        margin-top: 15px
+        margin-bottom: 15px
         .section-image
           .image
-            max-width: 100%
-            min-width: 250px
-            height: 250px
+            width: auto
+            height: 300px
             &.b-lazy
               -webkit-transition: all 0.3s ease-in-out
               -moz-transition: all 0.3s ease-in-out
@@ -18,6 +25,27 @@
               transition: all 0.3s ease-in-out
               background: #f7f7f7 url("/img/loading.gif") center no-repeat
               width: auto
-              height: 250px
+              height: 300px
             &.b-loaded
               background: transparent
+        .caption
+          padding-top: 20px
+          margin-left: 42.5px
+          margin-right: 42.5px
+          .section-brand
+            font-weight: bold
+            color: #585858
+            display: block
+            font-size: 14px
+          .section-title
+            color: #585858
+            display: block
+            font-size: 13px
+            padding-top: 5px
+            min-height: 36px
+          .section-price
+            color: #d4232b
+            display: block
+            font-size: 14px
+            font-weight: bold
+

@@ -8,11 +8,16 @@
         <div class="section-content clearfix">
             {% for product-item in site.product %}
             {% if product-item.category == product-category.slug-link %}
-            <div class="item col-lg-3">
+            <a href="{{ product-item.url }}" class="item col-lg-4">
                 <div class="section-image">
                     <img class="image b-lazy center-block" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== data-src="{{ product-item.product-cover }}"/>
                 </div>
-            </div>
+                <div class="caption clearfix">
+                    <span class="section-brand">{{ product-item.brand-name }}</span>
+                    <span class="section-title">{{ product-item.product-name }}</span>
+                    <span class="section-price">${{ product-item.price }}.00</span>
+                </div>
+            </a>
             {% endif %}
             {% endfor %}
         </div>

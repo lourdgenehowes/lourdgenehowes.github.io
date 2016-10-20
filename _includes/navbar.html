@@ -36,7 +36,7 @@
                                     {% for product in site.product %}
                                     {% if product.category == menu-item.slug-link %}
                                     <li>
-                                        <a href="#0">{{ product.product-name }}</a>
+                                        <a href="{{ product.url }}">{{ product.product-name }}</a>
                                     </li>
                                     {% endif %}
                                     {% endfor %}

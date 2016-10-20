@@ -6,7 +6,7 @@
         <div class="owl-carousel">
             {% for product-new in site.product %}
             {% if product-new.new-arrival == true %}
-            <a href="#" class="item">
+            <a href="{{ product-new.url }}" class="item">
                 <div class="section-image">
                     <img class="image center-block owl-lazy" data-src="{{ product-new.product-cover }}" src="{{ product-new.product-cover }}" alt="">
                 </div>
