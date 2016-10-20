@@ -1,0 +1,23 @@
+#product-list
+  .section-container
+    position: relative
+    .section-header
+      .header
+        text-align: left
+    .section-content
+      .item
+        .section-image
+          .image
+            max-width: 100%
+            min-width: 250px
+            height: 250px
+            &.b-lazy
+              -webkit-transition: all 0.3s ease-in-out
+              -moz-transition: all 0.3s ease-in-out
+              -o-transition: all 0.3s ease-in-out
+              transition: all 0.3s ease-in-out
+              background: #f7f7f7 url("/img/loading.gif") center no-repeat
+              width: auto
+              height: 250px
+            &.b-loaded
+              background: transparent
