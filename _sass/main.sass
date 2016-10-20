@@ -75,8 +75,15 @@ nav
         float: none
         height: auto
         .brand-logo
-          height: auto
+          transition: all 300ms ease-in-out
+          height: 115px
   &.navbar-shrink
+    transition: all 1s ease-in-out
+    .container-header
+      .navbar-header
+        .navbar-brand
+          .brand-logo
+            height: 80px
 
 .category-menu-container
   min-height: 50px
