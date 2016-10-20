@@ -20,7 +20,7 @@
                 <ul class="clearfix container no-gutter">
                     {% for menu in site.navbar-menu %}
                     <li class="has-dropdown links" data-content="{{ menu.slug-link }}">
-                        <a href="/product-list/#{{ menu.slug-link }}">{{ menu.title }}</a>
+                        <a href="/product/#{{ menu.slug-link }}">{{ menu.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
