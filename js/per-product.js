@@ -1,3 +1,5 @@
+
+
 jQuery(document).ready(function ($) {
     var galleryItems = $('.cd-gallery').children('li');
 
