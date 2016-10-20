@@ -40,7 +40,16 @@
         autoplay: true,
         autoplayTimeout: 10000,
         animateOut: 'fadeOut',
-        margin: 0
+        margin: 0,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            768:{
+                items:3
+            }
+        }
     });
 </script>
 {% endif %}

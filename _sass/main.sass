@@ -458,4 +458,26 @@ nav
               margin-left: 5px
               margin-right: 5px
 
+@media (max-width: $screen-sm-max)
+  body
+    margin-top: 110px
+  nav
+    &.navbar-default
+      min-height: 0
+  .navbar-header
+    float: none
+  .navbar-toggle
+    display: block
+
+  .navbar-collapse.collapse
+    display: none !important
+
+  .navbar-nav
+    float: none !important
+    > li
+      float: none
+
+  .navbar-collapse.collapse.in
+    display: block !important
+
 
