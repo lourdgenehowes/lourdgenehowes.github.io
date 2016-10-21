@@ -3,7 +3,7 @@
         <h2 class="header">New Arrivals</h2>
     </header>
     <div class="section-content">
-        <div class="owl-carousel">
+        <div class="owl-carousel" style="width: 1px; min-width: 100%;">
             {% for product-new in site.product %}
             {% if product-new.new-arrival == true %}
             <a href="{{ product-new.url }}" class="item">
