@@ -1,20 +1,22 @@
-<div class="container">
+<div class="container no-gutter">
     <div class="section-container clearfix">
-        <div class="left-section col-md-8 no-gutter">
+        <div class="left-section col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <ul class="cd-gallery">
                 <li>
-                    <a href="#">
+                    <a class="clearfix" href="#">
                         <ul class="cd-item-wrapper">
                             {% assign counter = 0 %}
                             {% for product-image in page.product-image %}
                             {% assign counter = counter | plus: 1 %}
-                            {% if forloop.first  == true %}
+                            {% if forloop.first == true %}
                             <li class="selected">
-                                <img class="center-block img-responsive" src="{{ product-image.image }}" alt="Preview image">
+                                <img class="center-block img-responsive" src="{{ product-image.image }}"
+                                     alt="Preview image">
                             </li>
                             {% else %}
-                            <li {% if counter ==2 %} class="move-right" {% else %} {% endif %}>
-                                <img class="center-block img-responsive" src="{{ product-image.image }}" alt="Preview image">
+                            <li {% if counter==2 %} class="move-right" {% else %} {% endif %}>
+                                <img class="center-block img-responsive" src="{{ product-image.image }}"
+                                     alt="Preview image">
                             </li>
                             {% endif %}
 
@@ -24,7 +26,7 @@
                 </li>
             </ul> <!-- cd-gallery -->
         </div>
-        <div class="right-section col-md-4 no-gutter">
+        <div class="right-section col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="product-details">
                 <span class="product-brand">{{ page.brand-name }}</span>
                 <span class="product-name">{{ page.product-name }}</span>
