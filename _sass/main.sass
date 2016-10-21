@@ -64,6 +64,8 @@ nav
   .container-header
     background-color: #30183a
     .navbar-header
+      margin-left: 0
+      margin-right: 0
       width: 100%
       .navbar-brand
         outline: none
@@ -531,10 +533,6 @@ nav
     top: 18px
     width: 0%
     left: 50%
-
-
-
-
   .navbar-header
     float: none
   .navbar-toggle
@@ -551,5 +549,16 @@ nav
   .navbar-collapse.collapse.in
     display: block !important
 
+@media (max-width: 568px)
+  nav
+    .navbar-toggle
+      right: 5px
 
-
+  .site-footer
+    .content-container
+      .left-section
+        position: relative
+        .content-text
+          text-align: center
+      .right-section
+        display: none
