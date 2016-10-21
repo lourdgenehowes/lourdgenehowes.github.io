@@ -9,7 +9,7 @@
         <div class="section-content clearfix">
             {% for product-item in site.product %}
             {% if product-item.category == product-category.slug-link %}
-            <a href="{{ product-item.url }}" class="item col-lg-4">
+            <a href="{{ product-item.url }}" class="item col-lg-4 col-md-4 col-sm-6">
                 <div class="section-image">
                     <img class="image b-lazy center-block"
                          src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
@@ -21,10 +21,11 @@
                     <span class="section-price">${{ product-item.price }}.00</span>
                 </div>
             </a>
+            <hr class="hidden-lg hidden-md hidden-sm visible-xs" style="width: 100%"/>
             {% endif %}
             {% endfor %}
         </div>
     </div>
-    <hr/>
+    <hr class="visible-lg visible-md visible-sm hidden-xs"/>
     {% endfor %}
 </div>

@@ -53,13 +53,27 @@
             display: block
             font-size: 14px
             font-weight: bold
-
-@media (max-width: 1366px)
+@media (max-width: 767px)
   #product-list
     .section-container
       .section-content
         .item
-          .section-image
-            .image.b-lazy
-              height: 250px
+          width: 50%
+          float: left
+          .caption
+            .section-title
+              min-height: 65px
+
+@media (max-width: 568px)
+  #product-list
+    .section-container
+      margin-top: 15px
+      margin-bottom: 15px
+      .section-content
+        .item
+          width: 100%
+
+
+
+
 
