@@ -1,3 +1,9 @@
+//Menu burger 
+$('#icon-transition').on('click', function () {
+    $(this).toggleClass('open');
+});
+
+//Navbar shrink
 $(function () {
     if (window.pageYOffset > 50 && $(document).width() >= 992) {
         $('nav').addClass('navbar-shrink')

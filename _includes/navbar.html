@@ -1,9 +1,9 @@
-<nav class="navbar navbar-fixed-top navbar-default">
+<nav class="navbar navbar-fixed-top navbar-default navbar-mobile">
     <div class="container-fluid container-header">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse"
+            <button type="button" id="icon-transition" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse"
                     aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -13,6 +13,18 @@
             </a>
         </div>
     </div><!-- /.container-fluid -->
+
+    <!--navbar menu on tablet - mobile screen-->
+    <div class="collapse navbar-collapse" id="menu-collapse">
+        <ul class="nav navbar-nav navbar-right hidden-lg hidden-md visible-sm visible-xs">
+            {% for menu in site.navbar-menu %}
+            <li class="navbar-menu" data-content="{{ menu.slug-link }}">
+                <a class="navbar-link" href="/product/#{{ menu.slug-link }}-link">{{ menu.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div><!-- /.navbar-collapse -->
+
     <div class="visible-lg visible-md hidden-sm hidden-xs category-menu-container">
         <header class="cd-morph-dropdown">
             <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
@@ -40,7 +52,6 @@
                                     </li>
                                     {% endif %}
                                     {% endfor %}
-
                                 </ul>
                             </div>
                         </li>
