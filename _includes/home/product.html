@@ -6,16 +6,18 @@
         <div class="owl-carousel" style="width: 1px; min-width: 100%;">
             {% for product-new in site.product %}
             {% if product-new.new-arrival == true %}
-            <a href="{{ product-new.url }}" class="item">
-                <div class="section-image">
-                    <img class="image center-block" data-src="{{ product-new.product-cover }}" src="{{ product-new.product-cover }}" alt="">
-                </div>
+            <div class="item">
+                <a class="image-link" href="{{ product-new.url }}">
+                    <div class="section-image">
+                        <img class="image center-block" data-src="{{ product-new.product-cover }}" src="{{ product-new.product-cover }}" alt="">
+                    </div>
+                </a>
                 <div class="caption clearfix">
                     <span class="section-brand">{{ product-new.brand-name }}</span>
                     <span class="section-title">{{ product-new.product-name }}</span>
                     <span class="section-price">${{ product-new.price }}.00</span>
                 </div>
-            </a>
+            </div>
             {% endif %}
             {% endfor %}
         </div>
@@ -28,16 +30,19 @@
         <div class="owl-carousel">
             {% for product-new in site.product %}
             {% if product-new.best-seller == true %}
-            <a href="#" class="item">
-                <div class="section-image">
-                    <img class="image center-block" data-src="{{ product-new.product-cover }}" src="{{ product-new.product-cover }}" alt="">
-                </div>
+            <div class="item">
+                <a class="image-link" href="{{ product-new.url }}">
+                    <div class="section-image">
+                        <img class="image center-block" data-src="{{ product-new.product-cover }}" src="{{ product-new.product-cover }}" alt="">
+                    </div>
+                </a>
                 <div class="caption clearfix">
                     <span class="section-brand">{{ product-new.brand-name }}</span>
                     <span class="section-title">{{ product-new.product-name }}</span>
                     <span class="section-price">${{ product-new.price }}.00</span>
                 </div>
-            </a>
+
+            </div>
             {% endif %}
             {% endfor %}
         </div>

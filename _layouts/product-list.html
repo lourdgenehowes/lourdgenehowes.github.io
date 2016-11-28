@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/product-list.css">
 </head>
-<body>
+<body ng-controller="myCtrl">
 
 {% include navbar.html %}
 {{ content }}
@@ -24,6 +24,19 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/blazy.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/ngCart.js"></script>
+
+<script type="text/javascript">
+    var myApp = angular.module('myApp',['ngCart']);
+
+    myApp.controller ('myCtrl', ['$scope', '$http', 'ngCart', function($scope, $http, ngCart) {
+        ngCart.setTaxRate(7.5);
+        ngCart.setShipping(2.99);
+    }]);
+</script>
+
 <script type="text/javascript">
     $(".links a").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior

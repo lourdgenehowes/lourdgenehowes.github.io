@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="/css/home.css">
 
 </head>
-<body>
+<body ng-controller="myCtrl">
 
 {% include navbar.html %}
 {{ content }}
+{% include ngcart.html %}
 {% include footer.html %}
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -27,7 +28,16 @@
 <script type="text/javascript" src="/js/main.js"></script>
 
 <script type="text/javascript" src="/js/angular.min.js"></script>
-<script type="text/javascript" src="/js/"></script>
+<script type="text/javascript" src="/js/ngCart.js"></script>
+
+<script type="text/javascript">
+    var myApp = angular.module('myApp',['ngCart']);
+
+    myApp.controller ('myCtrl', ['$scope', '$http', 'ngCart', function($scope, $http, ngCart) {
+        ngCart.setTaxRate(7.5);
+        ngCart.setShipping(2.99);
+    }]);
+</script>
 
 
 {% if page.url == "/" or page.url == "index.html" %}
