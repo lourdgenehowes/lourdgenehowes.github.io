@@ -14,8 +14,8 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             rm: '2',
             charset: 'utf-8',
             currency_code: 'PHP',
-            "return": 'http://localhost:4000/',
-            cancel_return: 'http://localhost:4000/',
+            "return": 'https://lourdgenehowes.github.io/',
+            cancel_return: 'https://lourdgenehowes.github.io/',
             country: "PH",
             no_note: 0
         };
