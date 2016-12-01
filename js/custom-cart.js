@@ -1,7 +1,7 @@
 var myApp = angular.module('myApp', ['ngCart']);
 
 myApp.controller('myCtrl', ['$scope', '$http', 'ngCart', function ($scope, $http, ngCart) {
-    ngCart.setShipping(2.99);
+    ngCart.setShipping(150.00);
 }]);
 
 myApp.controller('CheckoutCtrl', function ($scope,$log) {
@@ -21,6 +21,8 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
         };
         $log.debug(data);
         i = 0;
+        var shippingPrice = 150.00;
+
         while (i < cart.length) {
             item = cart[i];
             ctr = i + 1;
@@ -29,6 +31,7 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             data['item_name_' + ctr] = item._name;
             data['quantity_' + ctr] = item._quantity;
             data['amount_' + ctr] = item._price.toFixed(2);
+            data['shipping_' + ctr] = shippingPrice / cart.length;
             i++;
         }
         form = $('<form/></form>');
