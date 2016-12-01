@@ -1,9 +1,9 @@
 ---
-id: 6
+sku: 6
 layout: per-product
 new-arrival: true
 category: eye
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "Eyes to Mesmerise Mona Lisa"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/eyes-to-mesmerise/cover-image.jpg

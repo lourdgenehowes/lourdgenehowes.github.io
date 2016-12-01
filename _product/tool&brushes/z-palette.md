@@ -1,9 +1,9 @@
 ---
-id: 23
+sku: 23
 layout: per-product
 best-seller: true
 category: tool
-brand-name: "Z•PALETTE"
+brand: "Z•PALETTE"
 product-name: "Large Palette Lavender"
 price: "20"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/makeup-tool/z-palette/cover-image.jpg

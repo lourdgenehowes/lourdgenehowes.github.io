@@ -1,8 +1,8 @@
 ---
-id: 19
+sku: 19
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Velvet Underground"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/so-marilyn.jpg

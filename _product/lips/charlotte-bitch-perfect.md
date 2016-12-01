@@ -1,8 +1,8 @@
 ---
-id: 12
+sku: 12
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Bitch Perfect"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/bitch-perfect.jpg

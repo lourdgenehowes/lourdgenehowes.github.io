@@ -1,9 +1,9 @@
 ---
-id: 3
+sku: 3
 layout: per-product
 new-arrival: true
 category: eye
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "Eyes to Mesmerise Bette"
 price: "32"
 product-cover: "https://res.cloudinary.com/lourdgene/image/upload/eye/eyes-to-mesmerise/cover-image.jpg"

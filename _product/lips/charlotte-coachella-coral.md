@@ -1,8 +1,8 @@
 ---
-id: 13
+sku: 13
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Coachella Coral"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/coachella-coral.jpg

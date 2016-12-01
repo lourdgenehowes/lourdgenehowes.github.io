@@ -1,8 +1,8 @@
 ---
-id: 21
+sku: 21
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Velvet Underground"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/velvet-underground.jpg

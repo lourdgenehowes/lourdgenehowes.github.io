@@ -1,8 +1,8 @@
 ---
-id: 9
+sku: 9
 layout: per-product
 category: face
-brand-name: "Becca"
+brand: "Becca"
 product-name: "Shimmering Skin Perfector Moonstone Glow On The Go"
 price: "20"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/face/Moonstone%20Glow%20On%20The%20Go/moonstone-glow550x550.jpg

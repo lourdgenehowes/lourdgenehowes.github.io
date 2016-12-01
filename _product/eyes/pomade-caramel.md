@@ -1,8 +1,8 @@
 ---
-id: 8
+sku: 8
 layout: per-product
 category: eyes
-brand-name: "Anastasia"
+brand: "Anastasia"
 product-name: "Dipbrow Pomade Caramel"
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg

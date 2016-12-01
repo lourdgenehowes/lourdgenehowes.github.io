@@ -13,9 +13,9 @@
                     </div>
                 </a>
                 <div class="caption clearfix">
-                    <span class="section-brand">{{ product-new.brand-name }}</span>
+                    <span class="section-brand">{{ product-new.brand }}</span>
                     <span class="section-title">{{ product-new.product-name }}</span>
-                    <ngcart-addtocart id="{{ product-new.url }}" name="{{ product-new.product-name }}" price="{{ product-new.price }}.00">Add to Cart</ngcart-addtocart>
+                    <ngcart-addtocart id="{{ product-new.sku }}" name="{{ product-new.product-name }}" price="{{ product-new.price }}.00">Add to Cart</ngcart-addtocart>
                 </div>
             </div>
             {% endif %}
@@ -37,9 +37,9 @@
                     </div>
                 </a>
                 <div class="caption clearfix">
-                    <span class="section-brand">{{ product-new.brand-name }}</span>
+                    <span class="section-brand">{{ product-new.brand }}</span>
                     <span class="section-title">{{ product-new.product-name }}</span>
-                    <ngcart-addtocart id="{{ product-new.url }}" name="{{ product-new.product-name }}" price="{{ product-new.price }}.00" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+                    <ngcart-addtocart id="{{ product-new.sku }}" name="{{ product-new.product-name }}" price="{{ product-new.price }}.00" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
                 </div>
 
             </div>

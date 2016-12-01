@@ -1,9 +1,9 @@
 ---
-id: 2
+sku: 2
 layout: per-product
 best-seller: true
 category: cheek
-brand-name: "Becca"
+brand: "Becca"
 product-name: "Beach Tint Dragon Fruit "
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/cheeks/becca-blush/cover-image.jpg

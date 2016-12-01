@@ -1,8 +1,8 @@
 ---
-id: 4
+sku: 4
 layout: per-product
 category: eye
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "Eyes to Mesmerise Jean"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/eyes-to-mesmerise/cover-image.jpg

@@ -1,9 +1,9 @@
 ---
-id: 11
+sku: 11
 layout: per-product
 best-seller: true
 category: face
-brand-name: "Becca"
+brand: "Becca"
 product-name: "Shimmering Skin Perfector Pressed"
 price: "38"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/face/Shimmering%20Skin%20Perfector%20Pressed/pressed-pearl550x550.jpg

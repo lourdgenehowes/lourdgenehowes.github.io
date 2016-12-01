@@ -28,16 +28,7 @@
 
 <script type="text/javascript" src="/js/angular.js"></script>
 <script type="text/javascript" src="/js/ngCart.js"></script>
-
-<script type="text/javascript">
-    var myApp = angular.module('myApp',['ngCart']);
-
-    myApp.controller ('myCtrl', ['$scope', '$http', 'ngCart', function($scope, $http, ngCart) {
-        ngCart.setTaxRate(7.5);
-        ngCart.setShipping(2.99);
-    }]);
-</script>
-
+<script type="text/javascript" src="/js/custom-cart.js"></script>
 
 {% if page.url == "/" or page.url == "index.html" %}
 <script type="text/javascript">

@@ -1,8 +1,8 @@
 ---
-id: 20
+sku: 20
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Stoned Rose"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/v1476872038/lips/charlotte-luxury-lipstick/stone.jpg

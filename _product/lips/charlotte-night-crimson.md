@@ -1,8 +1,8 @@
 ---
-id: 16
+sku: 16
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Night Crimson"
 price: "100"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/cover-image.jpg

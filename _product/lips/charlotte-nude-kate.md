@@ -1,8 +1,8 @@
 ---
-id: 17
+sku: 17
 layout: per-product
 category: lips
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "K.I.S.S.I.N.G Nude Kate"
 price: "32"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/lips/charlotte-luxury-lipstick/nude-kate.jpg

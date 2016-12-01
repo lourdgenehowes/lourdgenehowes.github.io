@@ -17,9 +17,9 @@
                     </div>
                 </a>
                 <div class="caption clearfix">
-                    <span class="section-brand">{{ product-item.brand-name }}</span>
+                    <span class="section-brand">{{ product-item.brand }}</span>
                     <span class="section-title">{{ product-item.product-name }}</span>
-                    <ngcart-addtocart id="{{ product-item.url }}" name="{{ product-item.product-name }}" price="{{ product-item.price }}.00">Add to Cart</ngcart-addtocart>
+                    <ngcart-addtocart id="{{ product-item.sku }}" name="{{ product-item.product-name }}" price="{{ product-item.price }}.00">Add to Cart</ngcart-addtocart>
                 </div>
             </div>
             <hr class="hidden-lg hidden-md hidden-sm visible-xs" style="width: 100%"/>

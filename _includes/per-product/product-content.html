@@ -28,10 +28,10 @@
         </div>
         <div class="right-section col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="product-details">
-                <span class="product-brand">{{ page.brand-name }}</span>
+                <span class="product-brand">{{ page.brand }}</span>
                 <span class="product-name">{{ page.product-name }}</span>
                 <span class="product-price">${{ page.price }}.00</span>
-                <ngcart-addtocart id="{{ page.url }}" name="{{ page.product-name }}" price="{{ page.price }}.00">Add to Cart</ngcart-addtocart>
+                <ngcart-addtocart id="{{ page.sku }}" name="{{ page.product-name }}" price="{{ page.price }}.00">Add to Cart</ngcart-addtocart>
             </div>
         </div>
     </div>

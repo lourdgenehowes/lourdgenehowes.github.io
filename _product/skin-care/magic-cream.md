@@ -1,8 +1,8 @@
 ---
-id: 22
+sku: 22
 layout: per-product
 category: skin-care
-brand-name: "CHARLOTTE TILBURY"
+brand: "CHARLOTTE TILBURY"
 product-name: "Charlotte's Magic Cream"
 price: "100"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/skin-care/magic-cream.jpg

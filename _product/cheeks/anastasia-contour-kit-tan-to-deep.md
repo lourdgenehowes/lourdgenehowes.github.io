@@ -1,8 +1,8 @@
 ---
-id: 1
+sku: 1
 layout: per-product
 category: cheek
-brand-name: "Anastasia"
+brand: "Anastasia"
 product-name: "Contour Kit"
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/cheeks/anastasia-contour/light-to-medium550x550.jpg

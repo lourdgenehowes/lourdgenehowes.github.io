@@ -1,9 +1,9 @@
 ---
-id: 7
+sku: 7
 layout: per-product
 new-arrival: true
 category: eyes
-brand-name: "Anastasia"
+brand: "Anastasia"
 product-name: "Dipbrow Pomade Ash Brown "
 price: "40"
 product-cover: https://res.cloudinary.com/lourdgene/image/upload/eye/Dipbrow%20Pomade/cover-image.jpg
