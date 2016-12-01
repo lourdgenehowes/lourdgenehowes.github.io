@@ -9,7 +9,7 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
         var ctr, data, form, i, item;
         data = {
             cmd: '_cart',
-            business: 'rens.ramoss@crux.design',
+            business: 'rens.ramos@crux.design',
             upload: '1',
             rm: '2',
             charset: 'utf-8',
@@ -19,7 +19,8 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             country: "PH",
             no_note: 0
         };
-        $log.debug(data);
+
+        // $log.debug(data);
         i = 0;
         var shippingPrice = 150.00;
 
