@@ -1,20 +1,23 @@
 <nav class="navbar navbar-fixed-top navbar-default navbar-mobile">
+    <div class="container cart-section">
+        <div class="cart-summary">
+            <a href="/checkout/">
+                <ngcart-summary></ngcart-summary>
+            </a>
+        </div>
+    </div>
+
     <div class="container-fluid container-header">
         <div class="navbar-header">
-            <button type="button" id="icon-transition" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse"
-                    aria-expanded="false">
+            <button type="button" id="icon-transition" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-                <img class="brand-logo center-block" src="/img/brand-logo.jpg"/>
+                <img class="brand-logo center-block" src="/img/lourdgenehowes_logo.svg"/>
             </a>
-            <div class="cart-summary">
-                <ngcart-summary></ngcart-summary>
-                <a href="/checkout/">CHECKOUT</a>
-            </div>
         </div>
     </div><!-- /.container-fluid -->
 
