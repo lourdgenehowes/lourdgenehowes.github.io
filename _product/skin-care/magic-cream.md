@@ -1,5 +1,6 @@
 ---
 sku: 22
+quantity: 5
 layout: per-product
 category: skin-care
 brand: "CHARLOTTE TILBURY"

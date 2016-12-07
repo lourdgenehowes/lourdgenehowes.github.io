@@ -1,5 +1,6 @@
 ---
 sku: 23
+quantity: 5
 layout: per-product
 best-seller: true
 category: tool

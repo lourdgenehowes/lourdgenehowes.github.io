@@ -1,5 +1,6 @@
 ---
 sku: 11
+quantity: 5
 layout: per-product
 best-seller: true
 category: face

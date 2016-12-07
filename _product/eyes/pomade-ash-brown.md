@@ -1,5 +1,6 @@
 ---
 sku: 7
+quantity: 5
 layout: per-product
 new-arrival: true
 category: eyes

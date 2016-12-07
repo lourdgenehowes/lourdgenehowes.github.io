@@ -1,5 +1,6 @@
 ---
 sku: 9
+quantity: 5
 layout: per-product
 category: face
 brand: "Becca"

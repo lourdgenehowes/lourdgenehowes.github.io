@@ -1,5 +1,6 @@
 ---
 sku: 8
+quantity: 5
 layout: per-product
 category: eyes
 brand: "Anastasia"

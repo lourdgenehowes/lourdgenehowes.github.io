@@ -1,5 +1,6 @@
 ---
 sku: 21
+quantity: 5
 layout: per-product
 category: lips
 brand: "CHARLOTTE TILBURY"

@@ -1,5 +1,6 @@
 ---
 sku: 1
+quantity: 5
 layout: per-product
 category: cheek
 brand: "Anastasia"

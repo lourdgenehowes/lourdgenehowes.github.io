@@ -1,5 +1,6 @@
 ---
 sku: 2
+quantity: 2
 layout: per-product
 best-seller: true
 category: cheek

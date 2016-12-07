@@ -1,5 +1,6 @@
 ---
 sku: 4
+quantity: 5
 layout: per-product
 category: eye
 brand: "CHARLOTTE TILBURY"
