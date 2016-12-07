@@ -31,6 +31,7 @@
                 <span class="product-brand">{{ page.brand }}</span>
                 <span class="product-name">{{ page.product-name }}</span>
                 <span class="product-price">${{ page.price }}.00</span>
+                <span class="product-description">{{ page.content }}</span>
                 <ngcart-addtocart id="{{ page.sku }}" name="{{ page.product-name }}" price="{{ page.price }}.00">Add to Cart</ngcart-addtocart>
             </div>
         </div>
