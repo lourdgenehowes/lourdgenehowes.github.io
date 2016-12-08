@@ -33,6 +33,18 @@
 <script type="text/javascript" src="/js/ngCart.js"></script>
 <script type="text/javascript" src="/js/custom-cart.js"></script>
 
+<script type="text/javascript">
+
+    var thumbnail = $(".thumbnail-list");
+    thumbnail.on("click",function () {
+        $(".thumbnail-list.active").removeClass("active");
+        $(this).addClass("active");
+
+        $(".product-image").attr("src", $(this).find(".thumbnail-image").attr("src"));
+    });
+
+</script>
+
 
 </body>
 

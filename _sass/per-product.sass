@@ -5,31 +5,81 @@
   .section-container
     margin-top: 50px
     margin-bottom: 30px
-  .right-section
-    .product-details
-      margin-top: 50px
-      .product-brand
-        font-size: 16px
-        display: block
-        padding-bottom: 20px
-      .product-name
-        font-size: 20px
-        font-weight: bold
-        display: block
-        padding-bottom: 20px
-        text-transform: capitalize
-      .product-price
-        color: #d4232b
-        font-size: 16px
-        font-weight: bold
-        display: block
-        padding-bottom: 20px
-      .product-description
-        text-transform: capitalize
-        display: block
-        font-size: 14px
-        line-height: 25px
-        padding-bottom: 20px
+    .left-section
+      .thumbnail-section
+        float: left
+        width: 10%
+        .thumbnail-container
+          max-width: 62px
+          .thumbnail-list
+            display: block
+            padding: 5px
+            margin-bottom: 10px
+            border: 1px solid transparent
+            &.active
+              border: 1px solid #a4a4a4
+            .thumbnail-image
+              display: block
+              width: 50px
+      .image-section
+        width: 90%
+        margin-left: auto
+        margin-right: auto
+        .product-image
+          display: block
+          max-width: 50%
+          margin-left: auto
+          margin-right: auto
+
+    .right-section
+      float: left
+      .product-details
+        margin-top: 50px
+        .product-brand
+          font-size: 16px
+          display: block
+          padding-bottom: 20px
+        .product-name
+          font-size: 20px
+          font-weight: bold
+          display: block
+          padding-bottom: 20px
+          text-transform: capitalize
+        .product-price
+          color: #d4232b
+          font-size: 16px
+          font-weight: bold
+          display: block
+          padding-bottom: 20px
+        .product-description
+          text-transform: capitalize
+          display: block
+          font-size: 14px
+          line-height: 25px
+          padding-bottom: 20px
+      .cart-section
+        .quantity-section
+          margin-bottom: 15px
+          .quantity-text
+            display: inline-block
+          .quantity-number
+            display: inline-block
+        .cart-button-container
+          margin-top: 20px
+          .cart-button
+            display: block
+            background: #25162a
+            color: #fff
+            text-transform: uppercase
+            font-size: 18px
+            font-weight: bold
+            padding: 14px 0
+            text-align: center
+            max-width: 50%
+            min-width: 50%
+            border-color: transparent
+
+
 
 //Product Gallery
 .cd-gallery
