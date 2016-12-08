@@ -6,7 +6,6 @@
     <div class="quantity-section">
         <span class="quantity-text">Quantity</span>
         <select class="quantity-number" ng-show="quantityMax" name="quantity" id="quantity" ng-model="q" ng-options=" v for v in qtyOpt"></select>
-
     </div>
     <div class="cart-button-container">
         <a class="btn btn-sm btn-primary cart-button" ng-click="ngCart.addItem(id, name, price, q, data)" ng-transclude></a>
