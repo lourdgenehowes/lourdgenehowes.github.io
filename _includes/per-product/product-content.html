@@ -23,7 +23,7 @@
         </div>
         <div class="right-section col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="product-details">
-                <span class="product-brand">{{ page.brand }}</span>
+                <span class="product-brand" ng-model="productbrand" name="brand">{{ page.brand }}</span>
                 <span class="product-name">{{ page.product-name }}</span>
                 <span class="product-price">₱{{ page.price }}.00</span>
                 <span class="product-description">{{ page.content }}</span>
@@ -36,7 +36,7 @@
                         quantity="1"
                         price="{{ page.price }}"
                         quantity-max="{{ page.quantity }}"
-                        data="{{ item.brand }}">
+                        data="data">
                     Add to Cart
                 </ngcart-addtocart>
             </div>

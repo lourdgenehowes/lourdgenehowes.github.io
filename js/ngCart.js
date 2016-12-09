@@ -38,34 +38,32 @@ angular.module('ngCart', ['ngCart.directives'])
             };
         };
 
-        this.addItem = function (id, name, price, quantity, data) {
+        this.addItem = function (id, brand, name, price, quantity, data) {
 
-            var inCart = this.getItemById(id);
+            var inCart = this.getItemByIdBrand(id, brand);
 
             if (typeof inCart === 'object'){
                 //Update quantity of an item if it's already in the cart
                 inCart.setQuantity(quantity, false);
-                $rootScope.$broadcast('ngCart:itemUpdated', inCart);
             } else {
-                var newItem = new ngCartItem(id, name, price, quantity, data);
+                var newItem = new ngCartItem(id, brand, name, price, quantity, data);
                 this.$cart.items.push(newItem);
                 $rootScope.$broadcast('ngCart:itemAdded', newItem);
             }
 
             $rootScope.$broadcast('ngCart:change', {});
         };
-
-        this.getItemById = function (itemId) {
+        this.getItemByIdBrand = function (itemId, brand){
             var items = this.getCart().items;
             var build = false;
 
             angular.forEach(items, function (item) {
-                if  (item.getId() === itemId) {
+                if  (item.getId() === itemId && item.getBrand() == brand) {
                     build = item;
                 }
             });
             return build;
-        };
+        }
 
         this.setShipping = function(shipping){
             this.$cart.shipping = shipping;
@@ -188,7 +186,7 @@ angular.module('ngCart', ['ngCart.directives'])
             _self.$cart.tax = storedCart.tax;
 
             angular.forEach(storedCart.items, function (item) {
-                _self.$cart.items.push(new ngCartItem(item._id,  item._name, item._price, item._quantity, item._data));
+                _self.$cart.items.push(new ngCartItem(item._id, item._brand, item._name, item._price, item._quantity, item._data));
             });
             this.$save();
         };
@@ -201,14 +199,21 @@ angular.module('ngCart', ['ngCart.directives'])
 
     .factory('ngCartItem', ['$rootScope', '$log', function ($rootScope, $log) {
 
-        var item = function (id, name, price, quantity, data) {
+        var item = function (id, brand, name, price, quantity, data) {
             this.setId(id);
+            this.setBrand(brand);
             this.setName(name);
             this.setPrice(price);
             this.setQuantity(quantity);
             this.setData(data);
         };
 
+        item.prototype.setBrand = function(brand){
+            if (brand) this._brand = brand;
+        }
+        item.prototype.getBrand = function(){
+            return this._brand;
+        }
 
         item.prototype.setId = function(id){
             if (id)  this._id = id;
@@ -349,6 +354,7 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
             controller : 'CartController',
             scope: {
                 id:'@',
+                brand:'@',
                 name:'@',
                 quantity:'@',
                 quantityMax:'@',
@@ -366,11 +372,11 @@ angular.module('ngCart.directives', ['ngCart.fulfilment'])
             link:function(scope, element, attrs){
                 scope.attrs = attrs;
                 scope.inCart = function(){
-                    return  ngCart.getItemById(attrs.id);
+                    return  ngCart.getItemByIdBrand(attrs.id, attrs.brand);
                 };
 
                 if (scope.inCart()){
-                    scope.q = ngCart.getItemById(attrs.id).getQuantity();
+                    scope.q = ngCart.getItemByIdBrand(attrs.id, attrs.brand).getQuantity();
                 } else {
                     scope.q = parseInt(scope.quantity);
                 }

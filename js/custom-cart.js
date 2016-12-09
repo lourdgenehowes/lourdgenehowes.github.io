@@ -20,7 +20,7 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             no_note: 0
         };
 
-        // $log.debug(data);
+        $log.debug(data);
         i = 0;
         var shippingPrice = 150.00;
 
@@ -28,7 +28,7 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             item = cart[i];
             ctr = i + 1;
             data['item_number_' + ctr] = item._id;
-            data['brand_name_' + ctr] = item._name;
+            data['brand_name_' + ctr] = item._brand;
             data['item_name_' + ctr] = item._name;
             data['quantity_' + ctr] = item._quantity;
             data['amount_' + ctr] = item._price.toFixed(2);
@@ -55,4 +55,7 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             });
         }
     };
+
+    $scope.myVariable = "Brand name test value!";
 });
+
