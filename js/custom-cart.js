@@ -28,7 +28,8 @@ myApp.controller('CheckoutCtrl', function ($scope,$log) {
             item = cart[i];
             ctr = i + 1;
             data['item_number_' + ctr] = item._id;
-            data['brand_name_' + ctr] = item._brand;
+            data['on0_' + ctr] = "Brand";
+            data['os0_' + ctr] = item._brand;
             data['item_name_' + ctr] = item._name;
             data['quantity_' + ctr] = item._quantity;
             data['amount_' + ctr] = item._price.toFixed(2);
