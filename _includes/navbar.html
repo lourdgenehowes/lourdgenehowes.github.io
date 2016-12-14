@@ -17,58 +17,85 @@
             </button>
             <a class="navbar-brand" href="/">
                 <img class="brand-logo center-block" src="/img/brand-logo.svg"/>
-                <!--<img class="brand-logo center-block" src="/img/brand-logo.jpg"/>-->
             </a>
         </div>
     </div><!-- /.container-fluid -->
+    <div id="st-container" class="st-container">
+        <nav class="st-menu st-effect-1" id="menu-1">
+            <h2 class="icon icon-lab">Sidebar</h2>
+            <ul data-menu="main" class="menu__level">
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+            </ul>
+            <!-- Submenu 1 -->
+            <ul data-menu="submenu-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
+            </ul>
+            <!-- Submenu 1-1 -->
+            <ul data-menu="submenu-1-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+            </ul>
+            <!-- Submenu 2 -->
+            <ul data-menu="submenu-2" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Citrus Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Berries</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-2-1" href="#">Special Selection</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Tropical Fruits</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Melons</a></li>
+            </ul>
+            <!-- Submenu 2-1 -->
+            <ul data-menu="submenu-2-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Exotic Mixes</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Wild Pick</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+            </ul>
+            <!-- Submenu 3 -->
+            <ul data-menu="submenu-3" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Buckwheat</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Millet</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Quinoa</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Wild Rice</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Durum Wheat</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-3-1" href="#">Promo Packs</a></li>
+            </ul>
+            <!-- Submenu 3-1 -->
+            <ul data-menu="submenu-3-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Starter Kit</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">The Essential 8</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Flour Packs</a></li>
+            </ul>
+            <!-- Submenu 4 -->
+            <ul data-menu="submenu-4" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Grain Mylks</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Seed Mylks</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Nut Mylks</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Nutri Drinks</a></li>
+                <li class="menu__item"><a class="menu__link" data-submenu="submenu-4-1" href="#">Selection</a></li>
+            </ul>
+            <!-- Submenu 4-1 -->
+            <ul data-menu="submenu-4-1" class="menu__level">
+                <li class="menu__item"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Allergy Free</a></li>
+            </ul>
+        </nav>
 
-    <!--navbar menu on tablet - mobile screen-->
-    <div class="collapse navbar-collapse" id="menu-collapse">
-        <ul class="nav navbar-nav navbar-right hidden-lg hidden-md visible-sm visible-xs">
-            {% for menu in site.navbar-menu %}
-            <li class="navbar-menu" data-content="{{ menu.slug-link }}">
-                <a class="navbar-link" href="/product/#{{ menu.slug-link }}-link">{{ menu.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div><!-- /.navbar-collapse -->
+        <div class="st-pusher">
+            <div id="st-trigger-effects" class="column">
+                <button data-effect="st-effect-1">Slide in on top</button>
+            </div><!-- /st-content -->
+        </div><!-- /st-pusher -->
+    </div><!-- /st-container -->
 
-    <div class="visible-lg visible-md hidden-sm hidden-xs category-menu-container">
-        <header class="cd-morph-dropdown">
-            <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
-            <div class="clearfix main-nav">
-                <ul class="clearfix container no-gutter">
-                    {% for menu in site.navbar-menu %}
-                    <li class="has-dropdown links" data-content="{{ menu.slug-link }}">
-                        <a href="/product/#{{ menu.slug-link }}-link">{{ menu.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="morph-dropdown-wrapper">
-                <div class="dropdown-list">
-                    <ul>
-                        {% for menu-item in site.navbar-menu %}
-                        <li id="{{ menu-item.slug-link }}" class="dropdown links">
-                            <a href="#0" class="label">{{ menu-item.title }}</a>
-                            <div class="content">
-                                <ul class="links-list">
-                                    {% for product in site.product %}
-                                    {% if product.category == menu-item.slug-link %}
-                                    <li>
-                                        <a href="{{ product.url }}">{{ product.product-name }}</a>
-                                    </li>
-                                    {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <div class="bg-layer" aria-hidden="true"></div>
-                </div> <!-- dropdown-list -->
-            </div> <!-- morph-dropdown-wrapper -->
-        </header>
-
-    </div>
 </nav>

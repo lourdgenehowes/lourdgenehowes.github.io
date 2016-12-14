@@ -7,7 +7,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit
   vertical-align: baseline
 
+*
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:after, &::before
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
 /* HTML5 display-role reset for older browsers
+
+
+html,
+body,
+.st-container,
+.st-pusher,
+.st-content
+  height: 100%
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main
   display: block
@@ -83,356 +98,719 @@ nav
         .brand-logo
           transition: all 300ms ease-in-out
           height: 150px
-  &.navbar-shrink
-    transition: all 1s ease-in-out
-    .container-header
-      .navbar-header
-        .navbar-brand
-          .brand-logo
-            height: 130px
 
-.category-menu-container
-  min-height: 50px
+
+.st-content
+  overflow-y: scroll
+  background: #f3efe0
   position: relative
-  width: 100%
+
+.st-content-inner
+  position: relative
+
+.st-container
+  position: relative
+  overflow: hidden
+
+.st-pusher
+  position: relative
   left: 0
-  right: 0
-  margin-left: auto
-  margin-right: auto
-  background-color: #25162a
-  border-bottom: 0
-  //border-bottom: 1px solid #a7a7a7
-//Menu on hover
-.cd-morph-dropdown
-  &::before
-    /* never visible - used in JS to check mq
-    content: 'mobile'
-    display: none
-  .nav-trigger
-    /* menu icon - visible on small screens only
+  z-index: 99
+  height: 100%
+  -webkit-transition: -webkit-transform 0.5s
+  transition: transform 0.5s
+  &::after
     position: absolute
     top: 0
     right: 0
-    height: 50px
-    width: 50px
-    /* replace text with icon
-    overflow: hidden
-    text-indent: 100%
-    white-space: nowrap
-    color: transparent
-    span
-      /* these are the 3 lines of the menu icon
-      position: absolute
-      background-color: #1A1A1A
-      height: 3px
-      width: 26px
-      &::after, &::before
-        /* these are the 3 lines of the menu icon
-        position: absolute
-        background-color: #1A1A1A
-        height: 3px
-        width: 26px
-      left: 50%
-      top: 50%
-      bottom: auto
-      right: auto
-      -webkit-transform: translateX(-50%) translateY(-50%)
-      -ms-transform: translateX(-50%) translateY(-50%)
-      transform: translateX(-50%) translateY(-50%)
-      -webkit-transition: background-color .3s
-      transition: background-color .3s
-      &::after
-        content: ''
-        left: 0
-        -webkit-transition: -webkit-transform .3s
-        transition: -webkit-transform .3s
-        transition: transform .3s
-        transition: transform .3s, -webkit-transform .3s
-      &::before
-        content: ''
-        left: 0
-        -webkit-transition: -webkit-transform .3s
-        transition: -webkit-transform .3s
-        transition: transform .3s
-        transition: transform .3s, -webkit-transform .3s
-        -webkit-transform: translateY(-9px)
-        -ms-transform: translateY(-9px)
-        transform: translateY(-9px)
-      &::after
-        -webkit-transform: translateY(9px)
-        -ms-transform: translateY(9px)
-        transform: translateY(9px)
-  &.nav-open .nav-trigger span
-    background-color: transparent
-    &::before
-      -webkit-transform: rotate(45deg)
-      -ms-transform: rotate(45deg)
-      transform: rotate(45deg)
-    &::after
-      -webkit-transform: rotate(-45deg)
-      -ms-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-  .main-nav
-    display: none
-  .morph-dropdown-wrapper
-    display: none
+    width: 0
+    height: 0
+    background: rgba(0, 0, 0, 0.2)
+    content: ''
+    opacity: 0
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+
+.st-menu-open .st-pusher::after
+  width: 100%
+  height: 100%
+  opacity: 1
+  -webkit-transition: opacity 0.5s
+  transition: opacity 0.5s
+
+.st-menu
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  visibility: hidden
+  width: 300px
+  height: 100%
+  background: #48a770
+  -webkit-transition: all 0.5s
+  transition: all 0.5s
+  &::after
     position: absolute
-    top: 60px
-    left: 0
+    top: 0
+    right: 0
     width: 100%
-    padding: 1.2em 5%
-    box-shadow: inset 0 1px 0 #e6e6e6
-    background-color: #30183a
-  &.nav-open .morph-dropdown-wrapper
-    display: block
-  .dropdown-list > ul > li
-    margin-bottom: 3.3em
-  .label
-    display: block
-    margin-bottom: .8em
-  .content li::after
-    clear: both
-    content: ""
-    display: block
-  .gallery
-    .content
-      li
-        margin-bottom: 1.4em
-      a
-        display: block
-        &::before
-          /* icon on the left
-          content: ''
-          display: inline-block
-          float: left
-          height: 54px
-          width: 54px
-          margin-right: .6em
-          background: red
-          border-radius: 50%
-          -webkit-transition: background .2s
-          transition: background .2s
-        span
-          display: block
-          line-height: 1.2
-        em
-          display: block
-          line-height: 1.2
-          font-size: 1.8rem
-          padding: .4em 0 .2em
-          color: #1A1A1A
-        span
-          font-size: 1.4rem
-          color: #a6a6a6
-        &:hover::before
-          background-color: #1A1A1A
-    li
-      &:nth-of-type(1) a::before
-        background: #f4e58a url('/img/cd-gallery-icons.svg') no-repeat 0 0
-      &:nth-of-type(2) a::before
-        background: #F4AF6D url('/img/cd-gallery-icons.svg') no-repeat -54px 0
-      &:nth-of-type(3) a::before
-        background: #DB6356 url('/img/cd-gallery-icons.svg') no-repeat -108px 0
-      &:nth-of-type(4) a::before
-        background: #8D4645 url('/img/cd-gallery-icons.svg') no-repeat -162px 0
-  .links .content > ul > li
-    padding-top: 10px
-    padding-bottom: 10px
-  .links-list a
-    display: block
-    font-size: 14px
-    text-decoration: none
-    line-height: 20px
-  .links-list a:hover
-    color: white
-@media only screen and (min-width: 1000px)
-  .cd-morph-dropdown
-    &::before
-      content: 'desktop'
-    .nav-trigger
-      display: none
-    .main-nav
-      display: table
-      margin-left: auto
-      margin-right: auto
-      > ul
-        position: relative
-        display: block
-        > li
-          width: 16.666666667%
-          display: inline-block
-          float: left
-          > a
-            font-weight: 900
-            display: block
-            outline: none
-            color: #ffffff
-            font-size: 14px
-            padding-top: 17px
-            text-align: center
-            padding-bottom: 17px
-            text-decoration: none
-            text-transform: uppercase
-    &.is-dropdown-visible .main-nav > ul > li
-      > a
-        /* main navigation hover effect - on hover, reduce opacity of elements not hovered over
-        opacity: .6
-      &.active > a
-        opacity: 1
-    .morph-dropdown-wrapper
-      /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden
+    height: 100%
+    background: rgba(0, 0, 0, 0.2)
+    content: ''
+    opacity: 1
+    -webkit-transition: opacity 0.5s
+    transition: opacity 0.5s
+
+.st-menu-open .st-menu::after
+  width: 0
+  height: 0
+  opacity: 0
+  -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+
+/* content style
+
+.st-menu
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+  h2
+    margin: 0
+    padding: 1em
+    color: rgba(0, 0, 0, 0.4)
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1)
+    font-weight: 300
+    font-size: 2em
+  ul li
+    a
       display: block
-      top: 50px
-      /* overwrite mobile style
-      width: auto
-      padding: 0
-      box-shadow: none
-      background-color: transparent
-      /* Force Hardware acceleration
-      -webkit-transform: translateZ(0)
-      transform: translateZ(0)
-      will-change: transform
-      -webkit-transform: translateY(20px)
-      -ms-transform: translateY(20px)
-      transform: translateY(20px)
-      -webkit-transition: -webkit-transform .3s
-      transition: -webkit-transform .3s
-      transition: transform .3s
-      transition: transform .3s, -webkit-transform .3s
-    &.is-dropdown-visible .morph-dropdown-wrapper
-      -webkit-transform: translateY(0)
-      -ms-transform: translateY(0)
-      transform: translateY(0)
-    .dropdown-list
-      position: absolute
-      top: 0
-      left: 0
-      visibility: hidden
-      -webkit-transform: translateZ(0)
-      transform: translateZ(0)
-      will-change: transform, width, height
-      -webkit-transition: visibility .3s
-      transition: visibility .3s
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08)
-  .no-csstransitions .cd-morph-dropdown .dropdown-list
-    display: none
-  .cd-morph-dropdown
-    .dropdown-list
-      &::before
-        /* dropdown top triangle
-        content: ''
-        position: absolute
-        bottom: 100%
-        left: 50%
-        right: auto
-        -webkit-transform: translateX(-50%)
-        -ms-transform: translateX(-50%)
-        transform: translateX(-50%)
-        height: 0
-        width: 0
-        border: 8px solid transparent
-        border-bottom-color: #30183a
-        opacity: 0
-        -webkit-transition: opacity .3s
-        transition: opacity .3s
-      > ul
-        position: relative
-        z-index: 1
-        height: 100%
-        width: 100%
-        overflow: hidden
-    &.is-dropdown-visible .dropdown-list
-      visibility: visible
-      -webkit-transition: width .3s, height .3s, -webkit-transform .3s
-      transition: width .3s, height .3s, -webkit-transform .3s
-      transition: transform .3s, width .3s, height .3s
-      transition: transform .3s, width .3s, height .3s, -webkit-transform .3s
-      &::before
-        opacity: 1
-    .dropdown
-      position: absolute
-      left: 0
-      top: 0
-      opacity: 0
-      visibility: hidden
-      width: 100%
-      -webkit-transition: opacity .3s, visibility .3s
-      transition: opacity .3s, visibility .3s
-      &.active
-        opacity: 1
-        visibility: visible
-      &.move-left .content
-        -webkit-transform: translateX(-100px)
-        -ms-transform: translateX(-100px)
-        transform: translateX(-100px)
-      &.move-right .content
-        -webkit-transform: translateX(100px)
-        -ms-transform: translateX(100px)
-        transform: translateX(100px)
-    .label
-      /* hide the label on bigger devices
-      display: none
-    .content
-      padding: 1rem 1.5rem
-      -webkit-transition: -webkit-transform .3s
-      transition: -webkit-transform .3s
-      transition: transform .3s
-      transition: transform .3s, -webkit-transform .3s
-      text-align: left
-      > ul
-        &::after
-          clear: both
-          content: ""
-          display: block
-        > li
-          width: 48%
-          float: left
-          margin-right: 4%
-          margin-top: 0
-          &:nth-of-type(2n)
-            margin-right: 0
-    .gallery .content
-      /* you need to set a width for the .content elements because they have a position absolute
-      width: 510px
-      padding-bottom: .8em
-      li
-        margin-bottom: 1.8em
-    .links .content
-      > ul > li
-        margin-top: 0
-      width: 350px
-    .links-list a
-      color: white
-      font-size: 14px
-      margin-left: 0
+      padding: 1em 1em 1em 1.2em
+      outline: none
+      box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
+      color: #f3efe0
+      text-transform: uppercase
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.1)
+      letter-spacing: 1px
       font-weight: 400
-      &:hover
-        opacity: .7
-    .bg-layer
-      /* morph dropdown background
-      position: absolute
-      top: 0
-      left: 0
-      height: 1px
-      width: 1px
-      background: #30183a
-      opacity: 0
-      -webkit-transition: opacity .3s
-      transition: opacity .3s
-      -webkit-transform-origin: top left
-      -ms-transform-origin: top left
-      transform-origin: top left
-      -webkit-transform: translateZ(0)
-      transform: translateZ(0)
-      will-change: transform
-      -webkit-backface-visibility: hidden
-      backface-visibility: hidden
-    &.is-dropdown-visible .bg-layer
-      opacity: 1
-      -webkit-transition: opacity .3s, -webkit-transform .3s
-      transition: opacity .3s, -webkit-transform .3s
-      transition: transform .3s, opacity .3s
-      transition: transform .3s, opacity .3s, -webkit-transform .3s
+      -webkit-transition: background 0.3s, box-shadow 0.3s
+      transition: background 0.3s, box-shadow 0.3s
+    &:first-child a
+      box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2)
+    a:hover
+      background: rgba(0, 0, 0, 0.2)
+      box-shadow: inset 0 -1px rgba(0, 0, 0, 0)
+      color: #fff
+
+//Slide left effect
+/* Effect 1: Slide in on top
+
+.st-effect-1
+  &.st-menu
+    visibility: visible
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  &.st-menu-open .st-effect-1.st-menu
+    visibility: visible
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  &.st-menu::after
+    display: none
+
+/* Effect 2: Reveal
+
+.st-effect-2
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    z-index: 1
+  &.st-menu-open .st-effect-2.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+  &.st-menu::after
+    display: none
+
+/* Effect 3: Push
+
+.st-effect-3
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  &.st-menu-open .st-effect-3.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+  &.st-menu::after
+    display: none
+
+/* Effect 4: Slide along
+
+.st-effect-4
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    z-index: 1
+    -webkit-transform: translate3d(-50%, 0, 0)
+    transform: translate3d(-50%, 0, 0)
+  &.st-menu-open .st-effect-4.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  &.st-menu::after
+    display: none
+
+/* Effect 5: Reverse slide out
+
+.st-effect-5
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    z-index: 1
+    -webkit-transform: translate3d(50%, 0, 0)
+    transform: translate3d(50%, 0, 0)
+  &.st-menu-open .st-effect-5.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+/* Effect 6: Rotate pusher
+
+.st-effect-6
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+  .st-pusher
+    -webkit-transform-origin: 0% 50%
+    transform-origin: 0% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0) rotateY(-15deg)
+    transform: translate3d(300px, 0, 0) rotateY(-15deg)
+  &.st-menu
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+    -webkit-transform-origin: 100% 50%
+    transform-origin: 100% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-effect-6.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg)
+    transform: translate3d(-100%, 0, 0) rotateY(15deg)
+  &.st-menu::after
+    display: none
+
+/* Effect 7: 3D rotate in
+
+.st-effect-7
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
+  .st-pusher
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+    transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+    -webkit-transform-origin: 100% 50%
+    transform-origin: 100% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-effect-7.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+
+/* Effect 8: 3D rotate out
+
+.st-effect-8
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
+  .st-pusher
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+    transform: translate3d(-100%, 0, 0) rotateY(90deg)
+    -webkit-transform-origin: 100% 50%
+    transform-origin: 100% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-effect-8.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+  &.st-menu::after
+    display: none
+
+/* Effect 9: Scale down pusher
+
+.st-effect-9
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+  .st-pusher
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(0, 0, -300px)
+    transform: translate3d(0, 0, -300px)
+  &.st-menu
+    opacity: 1
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  &.st-menu-open .st-effect-9.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  &.st-menu::after
+    display: none
+
+/* Effect 10: Scale up
+
+.st-effect-10
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    z-index: 1
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, -300px)
+    transform: translate3d(0, 0, -300px)
+  &.st-menu-open .st-effect-10.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+/* Effect 11: Scale and rotate pusher
+
+.st-effect-11
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+  .st-pusher
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+    transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+  &.st-menu
+    opacity: 1
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  &.st-menu-open .st-effect-11.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  &.st-menu::after
+    display: none
+
+/* Effect 12: Open door
+
+.st-effect-12
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+  .st-pusher
+    -webkit-transform-origin: 100% 50%
+    transform-origin: 100% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: rotateY(-10deg)
+    transform: rotateY(-10deg)
+  &.st-menu
+    opacity: 1
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+  &.st-menu-open .st-effect-12.st-menu
+    visibility: visible
+    -webkit-transition: -webkit-transform 0.5s
+    transition: transform 0.5s
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  &.st-menu::after
+    display: none
+
+/* Effect 13: Fall down
+
+.st-effect-13
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    z-index: 1
+    opacity: 1
+    -webkit-transform: translate3d(0, -100%, 0)
+    transform: translate3d(0, -100%, 0)
+  &.st-menu-open .st-effect-13.st-menu
+    visibility: visible
+    -webkit-transition-timing-function: ease-in-out
+    transition-timing-function: ease-in-out
+    -webkit-transition-property: -webkit-transform
+    transition-property: transform
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-transition-speed: 0.2s
+    transition-speed: 0.2s
+
+/* Effect 14: Delayed 3D rotate
+
+.st-effect-14
+  &.st-container
+    -webkit-perspective: 1500px
+    perspective: 1500px
+    -webkit-perspective-origin: 0% 50%
+    perspective-origin: 0% 50%
+  .st-pusher
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-pusher
+    -webkit-transform: translate3d(300px, 0, 0)
+    transform: translate3d(300px, 0, 0)
+  &.st-menu
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+    transform: translate3d(-100%, 0, 0) rotateY(90deg)
+    -webkit-transform-origin: 0% 50%
+    transform-origin: 0% 50%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+  &.st-menu-open .st-effect-14.st-menu
+    visibility: visible
+    -webkit-transition-delay: 0.1s
+    transition-delay: 0.1s
+    -webkit-transition-timing-function: ease-in-out
+    transition-timing-function: ease-in-out
+    -webkit-transition-property: -webkit-transform
+    transition-property: transform
+    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback)
+
+.no-csstransforms3d .st-pusher, .no-js .st-pusher
+  padding-left: 300px
+
+//Slide left end
+
+
+//Multi level menu
+@font-face
+  font-family: 'feather'
+  font-weight: normal
+  font-style: normal
+  src: url('/fonts/feather/feather.eot?1gafuo')
+  src: url('/fonts/feather/feather.eot?1gafuo#iefix') format("embedded-opentype"), url('/fonts/feather/feather.woff2?1gafuo') format("woff2"), url('/fonts/feather/feather.ttf?1gafuo') format("truetype"), url('/fonts/feather/feather.woff?1gafuo') format("woff"), url('/fonts/feather/feather.svg?1gafuo#feather') format("svg")
+
+
+.icon
+  font-family: 'feather'
+  font-weight: normal
+  font-style: normal
+  font-variant: normal
+  line-height: 1
+  text-transform: none
+  /* Better Font Rendering ===========
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  speak: none
+
+.icon--arrow-left:before
+  content: '\e901'
+
+.icon--menu:before
+  content: '\e903'
+
+.icon--cross:before
+  content: '\e117'
+
+/* Menu styles
+
+
+.menu__level
+  position: absolute
+  top: 0
+  left: 0
+  visibility: hidden
+  overflow: hidden
+  overflow-y: scroll
+  width: calc(100% + 50px)
+  height: 100%
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.menu__level--current
+  visibility: visible
+
+.menu__item
+  display: block
+  width: calc(100% - 50px)
+
+.menu__link
+  font-weight: 600
+  position: relative
+  display: block
+  padding: 1em 2.5em 1em 1.5em
+  color: #bdbdbd
+  -webkit-transition: color 0.1s
+  transition: color 0.1s
+  &[data-submenu]::after
+    content: '\e904'
+    font-family: 'feather'
+    position: absolute
+    right: 0
+    padding: 0.25em 1.25em
+    color: #2a2b30
+  &:hover, &[data-submenu]:hover::after
+    color: #5c5edc
+
+.menu__link--current::before
+  content: '\00B7'
+  font-size: 1.5em
+  line-height: 0
+  position: absolute
+  top: 50%
+  left: 0.5em
+  height: 4px
+  color: #5c5edc
+
+[class^='animate-'], [class*=' animate-']
+  visibility: visible
+
+.animate-outToRight .menu__item
+  -webkit-animation: outToRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+  animation: outToRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+
+@-webkit-keyframes outToRight
+  to
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+
+
+@keyframes outToRight
+  to
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+
+
+.animate-outToLeft .menu__item
+  -webkit-animation: outToLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+  animation: outToLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+
+@-webkit-keyframes outToLeft
+  to
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+
+
+@keyframes outToLeft
+  to
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+
+
+.animate-inFromLeft .menu__item
+  -webkit-animation: inFromLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+  animation: inFromLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+
+@-webkit-keyframes inFromLeft
+  from
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes inFromLeft
+  from
+    opacity: 0
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+.animate-inFromRight .menu__item
+  -webkit-animation: inFromRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+  animation: inFromRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
+
+@-webkit-keyframes inFromRight
+  from
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes inFromRight
+  from
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+
+.menu__breadcrumbs
+  font-size: 0.65em
+  line-height: 1
+  position: relative
+  padding: 2.5em 3.75em 1.5em 2.5em
+  a
+    font-weight: bold
+    display: inline-block
+    cursor: pointer
+    vertical-align: middle
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #5c5edc
+    &:last-child
+      pointer-events: none
+    &:hover
+      color: #8182e0
+    &:not(:last-child)
+      &::after
+        content: '\e902'
+        font-family: 'feather'
+        display: inline-block
+        padding: 0 0.5em
+        color: #33353e
+      &:hover::after
+        color: #33353e
+
+.menu__back
+  font-size: 1.05em
+  position: absolute
+  z-index: 100
+  top: 0
+  right: 2.25em
+  margin: 0
+  padding: 1.365em 0.65em 0 0
+  cursor: pointer
+  color: #2a2b30
+  border: none
+  background: none
+
+.menu__back--hidden
+  pointer-events: none
+  opacity: 0
+
+.menu__back
+  &:hover, &:focus
+    color: #fff
+    outline: none
+
+/* Open and close buttons
+
+.action
+  position: absolute
+  display: block
+  margin: 0
+  padding: 0
+  cursor: pointer
+  border: none
+  background: none
+  &:focus
+    outline: none
+
+.action--open
+  font-size: 1.5em
+  top: 1em
+  left: 1em
+  display: none
+  color: #fff
+  position: fixed
+  z-index: 1000
+
+.action--close
+  font-size: 1.1em
+  top: 1.25em
+  right: 1em
+  display: none
+  color: #45464e
+
+@media screen and (max-width: 40em)
+  .action--open, .action--close
+    display: block
+  .menu
+    z-index: 1000
+    top: 0
+    width: 100%
+    height: 100vh
+    -webkit-transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-100%, 0, 0)
+    -webkit-transition: -webkit-transform 0.3s
+    transition: transform 0.3s
+  .menu--open
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+//Multi level menu end
+
 
 
 @media (max-width: 1440px)
