@@ -16,6 +16,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* HTML5 display-role reset for older browsers
 
+//Muli Font
+@font-face
+  font-family: 'Muli'
+  src: url('/fonts/muli/Muli.ttf')
+
+@font-face
+  font-family: 'Muli-Light'
+  src: url('/fonts/muli/Muli-Light.ttf')
+
+@font-face
+  font-family: 'Muli-SemiBold'
+  src: url('/fonts/muli/Muli-SemiBold.ttf')
+
+@font-face
+  font-family: 'Muli-Bold.ttf'
+  src: url('/fonts/muli/Muli-Bold.ttf')
 
 html,
 body,
@@ -29,11 +45,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body
   line-height: 1
+  font-family: "Muli"
 
 img
   image-rendering: auto
-  //image-rendering: crisp-edges
-  //image-rendering: pixelated
+//image-rendering: crisp-edges
+//image-rendering: pixelated
 
 
 ol, ul
@@ -56,14 +73,13 @@ table
   border-collapse: collapse
   border-spacing: 0
 
-
 .no-gutter
   padding-left: 0
   padding-right: 0
 
 body
   color: #585858
-  font-family: "Lato","sans-serif"
+  font-family: "Lato", "sans-serif"
   text-transform: uppercase
   font-weight: 400
   margin-top: 262px
@@ -74,31 +90,26 @@ body
 
 nav
   &.navbar-default
-    min-height: 146px
     background-color: #ffffff
-    border-bottom: 0
+    border-bottom: 1px solid #e5e5e5
   .cart-section
     .cart-summary
       float: right
   .container-header
     background-color: #ffffff
-    .navbar-header
-      margin-left: 0
-      margin-right: 0
-      width: 100%
-      .navbar-brand
-        outline: none
-        -ms-outline: none
-        -o-outline: none
-        display: table
-        margin-left: auto
-        margin-right: auto
-        float: none
+    text-align: center
+    .navbar-brand
+      display: block
+      max-width: 250px
+      margin-left: auto !important
+      margin-right: auto
+      height: auto
+      padding: 0
+      float: none
+      .brand-logo
+        width: 100%
         height: auto
-        .brand-logo
-          transition: all 300ms ease-in-out
-          height: 150px
-
+        transition: all 300ms ease-in-out
 
 .st-content
   overflow-y: scroll
@@ -108,17 +119,10 @@ nav
 .st-content-inner
   position: relative
 
-.st-container
-  position: relative
-  overflow: hidden
-
 .st-pusher
   position: relative
+  float: left
   left: 0
-  z-index: 99
-  height: 100%
-  -webkit-transition: -webkit-transform 0.5s
-  transition: transform 0.5s
   &::after
     position: absolute
     top: 0
@@ -217,327 +221,10 @@ nav
   &.st-menu::after
     display: none
 
-/* Effect 2: Reveal
-
-.st-effect-2
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    z-index: 1
-  &.st-menu-open .st-effect-2.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-  &.st-menu::after
-    display: none
-
-/* Effect 3: Push
-
-.st-effect-3
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    -webkit-transform: translate3d(-100%, 0, 0)
-    transform: translate3d(-100%, 0, 0)
-  &.st-menu-open .st-effect-3.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-  &.st-menu::after
-    display: none
-
-/* Effect 4: Slide along
-
-.st-effect-4
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    z-index: 1
-    -webkit-transform: translate3d(-50%, 0, 0)
-    transform: translate3d(-50%, 0, 0)
-  &.st-menu-open .st-effect-4.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-  &.st-menu::after
-    display: none
-
-/* Effect 5: Reverse slide out
-
-.st-effect-5
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    z-index: 1
-    -webkit-transform: translate3d(50%, 0, 0)
-    transform: translate3d(50%, 0, 0)
-  &.st-menu-open .st-effect-5.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-
-/* Effect 6: Rotate pusher
-
-.st-effect-6
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-  .st-pusher
-    -webkit-transform-origin: 0% 50%
-    transform-origin: 0% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0) rotateY(-15deg)
-    transform: translate3d(300px, 0, 0) rotateY(-15deg)
-  &.st-menu
-    -webkit-transform: translate3d(-100%, 0, 0)
-    transform: translate3d(-100%, 0, 0)
-    -webkit-transform-origin: 100% 50%
-    transform-origin: 100% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-effect-6.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg)
-    transform: translate3d(-100%, 0, 0) rotateY(15deg)
-  &.st-menu::after
-    display: none
-
-/* Effect 7: 3D rotate in
-
-.st-effect-7
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-    -webkit-perspective-origin: 0% 50%
-    perspective-origin: 0% 50%
-  .st-pusher
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg)
-    transform: translate3d(-100%, 0, 0) rotateY(-90deg)
-    -webkit-transform-origin: 100% 50%
-    transform-origin: 100% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-effect-7.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
-    transform: translate3d(-100%, 0, 0) rotateY(0deg)
-
-/* Effect 8: 3D rotate out
-
-.st-effect-8
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-    -webkit-perspective-origin: 0% 50%
-    perspective-origin: 0% 50%
-  .st-pusher
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
-    transform: translate3d(-100%, 0, 0) rotateY(90deg)
-    -webkit-transform-origin: 100% 50%
-    transform-origin: 100% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-effect-8.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
-    transform: translate3d(-100%, 0, 0) rotateY(0deg)
-  &.st-menu::after
-    display: none
-
-/* Effect 9: Scale down pusher
-
-.st-effect-9
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-  .st-pusher
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(0, 0, -300px)
-    transform: translate3d(0, 0, -300px)
-  &.st-menu
-    opacity: 1
-    -webkit-transform: translate3d(-100%, 0, 0)
-    transform: translate3d(-100%, 0, 0)
-  &.st-menu-open .st-effect-9.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-  &.st-menu::after
-    display: none
-
-/* Effect 10: Scale up
-
-.st-effect-10
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-    -webkit-perspective-origin: 0% 50%
-    perspective-origin: 0% 50%
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    z-index: 1
-    opacity: 1
-    -webkit-transform: translate3d(0, 0, -300px)
-    transform: translate3d(0, 0, -300px)
-  &.st-menu-open .st-effect-10.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-
-/* Effect 11: Scale and rotate pusher
-
-.st-effect-11
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-  .st-pusher
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
-    transform: translate3d(100px, 0, -600px) rotateY(-20deg)
-  &.st-menu
-    opacity: 1
-    -webkit-transform: translate3d(-100%, 0, 0)
-    transform: translate3d(-100%, 0, 0)
-  &.st-menu-open .st-effect-11.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-  &.st-menu::after
-    display: none
-
-/* Effect 12: Open door
-
-.st-effect-12
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-  .st-pusher
-    -webkit-transform-origin: 100% 50%
-    transform-origin: 100% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: rotateY(-10deg)
-    transform: rotateY(-10deg)
-  &.st-menu
-    opacity: 1
-    -webkit-transform: translate3d(-100%, 0, 0)
-    transform: translate3d(-100%, 0, 0)
-  &.st-menu-open .st-effect-12.st-menu
-    visibility: visible
-    -webkit-transition: -webkit-transform 0.5s
-    transition: transform 0.5s
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-  &.st-menu::after
-    display: none
-
-/* Effect 13: Fall down
-
-.st-effect-13
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-    -webkit-perspective-origin: 0% 50%
-    perspective-origin: 0% 50%
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    z-index: 1
-    opacity: 1
-    -webkit-transform: translate3d(0, -100%, 0)
-    transform: translate3d(0, -100%, 0)
-  &.st-menu-open .st-effect-13.st-menu
-    visibility: visible
-    -webkit-transition-timing-function: ease-in-out
-    transition-timing-function: ease-in-out
-    -webkit-transition-property: -webkit-transform
-    transition-property: transform
-    -webkit-transform: translate3d(0, 0, 0)
-    transform: translate3d(0, 0, 0)
-    -webkit-transition-speed: 0.2s
-    transition-speed: 0.2s
-
-/* Effect 14: Delayed 3D rotate
-
-.st-effect-14
-  &.st-container
-    -webkit-perspective: 1500px
-    perspective: 1500px
-    -webkit-perspective-origin: 0% 50%
-    perspective-origin: 0% 50%
-  .st-pusher
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-pusher
-    -webkit-transform: translate3d(300px, 0, 0)
-    transform: translate3d(300px, 0, 0)
-  &.st-menu
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
-    transform: translate3d(-100%, 0, 0) rotateY(90deg)
-    -webkit-transform-origin: 0% 50%
-    transform-origin: 0% 50%
-    -webkit-transform-style: preserve-3d
-    transform-style: preserve-3d
-  &.st-menu-open .st-effect-14.st-menu
-    visibility: visible
-    -webkit-transition-delay: 0.1s
-    transition-delay: 0.1s
-    -webkit-transition-timing-function: ease-in-out
-    transition-timing-function: ease-in-out
-    -webkit-transition-property: -webkit-transform
-    transition-property: transform
-    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
-    transform: translate3d(-100%, 0, 0) rotateY(0deg)
-
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback)
-
 .no-csstransforms3d .st-pusher, .no-js .st-pusher
   padding-left: 300px
 
 //Slide left end
-
 
 //Multi level menu
 @font-face
@@ -546,7 +233,6 @@ nav
   font-style: normal
   src: url('/fonts/feather/feather.eot?1gafuo')
   src: url('/fonts/feather/feather.eot?1gafuo#iefix') format("embedded-opentype"), url('/fonts/feather/feather.woff2?1gafuo') format("woff2"), url('/fonts/feather/feather.ttf?1gafuo') format("truetype"), url('/fonts/feather/feather.woff?1gafuo') format("woff"), url('/fonts/feather/feather.svg?1gafuo#feather') format("svg")
-
 
 .icon
   font-family: 'feather'
@@ -633,13 +319,11 @@ nav
     -webkit-transform: translate3d(100%, 0, 0)
     transform: translate3d(100%, 0, 0)
 
-
 @keyframes outToRight
   to
     opacity: 0
     -webkit-transform: translate3d(100%, 0, 0)
     transform: translate3d(100%, 0, 0)
-
 
 .animate-outToLeft .menu__item
   -webkit-animation: outToLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
@@ -651,13 +335,11 @@ nav
     -webkit-transform: translate3d(-100%, 0, 0)
     transform: translate3d(-100%, 0, 0)
 
-
 @keyframes outToLeft
   to
     opacity: 0
     -webkit-transform: translate3d(-100%, 0, 0)
     transform: translate3d(-100%, 0, 0)
-
 
 .animate-inFromLeft .menu__item
   -webkit-animation: inFromLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
@@ -674,7 +356,6 @@ nav
     -webkit-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
 
-
 @keyframes inFromLeft
   from
     opacity: 0
@@ -685,7 +366,6 @@ nav
     opacity: 1
     -webkit-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
-
 
 .animate-inFromRight .menu__item
   -webkit-animation: inFromRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1)
@@ -702,7 +382,6 @@ nav
     -webkit-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
 
-
 @keyframes inFromRight
   from
     opacity: 0
@@ -713,7 +392,6 @@ nav
     opacity: 1
     -webkit-transform: translate3d(0, 0, 0)
     transform: translate3d(0, 0, 0)
-
 
 .menu__breadcrumbs
   font-size: 0.65em
@@ -819,17 +497,6 @@ nav
  *xheader
  *
  *--------------------------------
-
-header
-  position: fixed
-  top: 0
-  left: 0
-  height: 50px
-  width: 100%
-  background: #31353d
-  text-align: center
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1)
-  z-index: 4
 
 @media only screen and (min-width: 1200px)
   header
@@ -1064,14 +731,12 @@ header
   100%
     opacity: 1
 
-
 @-moz-keyframes cd-fade-in
   0%
     opacity: 0
 
   100%
     opacity: 1
-
 
 @keyframes cd-fade-in
   0%
