@@ -1,89 +1,83 @@
 <nav class="navbar navbar-fixed-top navbar-default navbar-mobile">
-    <div class="container cart-section">
-        <div class="cart-summary">
-            <a href="/checkout/">
-                <ngcart-summary></ngcart-summary>
-            </a>
-        </div>
-    </div>
+    <!--<div class="container cart-section">-->
+        <!--<div class="cart-summary">-->
+            <!--<a href="/checkout/">-->
+                <!--<ngcart-summary></ngcart-summary>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="container-fluid container-header">
-        <div class="navbar-header">
-            <button type="button" id="icon-transition" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-                <img class="brand-logo center-block" src="/img/brand-logo.svg"/>
-            </a>
-        </div>
-    </div><!-- /.container-fluid -->
-    <div id="st-container" class="st-container">
-        <nav class="st-menu st-effect-1" id="menu-1">
-            <h2 class="icon icon-lab">Sidebar</h2>
-            <ul data-menu="main" class="menu__level">
-                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
-                <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
-                <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
-                <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
-            </ul>
-            <!-- Submenu 1 -->
-            <ul data-menu="submenu-1" class="menu__level">
-                <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
-                <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
-            </ul>
-            <!-- Submenu 1-1 -->
-            <ul data-menu="submenu-1-1" class="menu__level">
-                <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
-            </ul>
-        </nav>
         <div class="st-pusher">
             <div id="st-trigger-effects" class="column">
                 <button data-effect="st-effect-1">Slide in on top</button>
             </div><!-- /st-content -->
         </div><!-- /st-pusher -->
-    </div><!-- /st-container -->
 
-    <header>
-        <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>
-    </header>
-    <div id="cd-cart">
-        <h2>Cart</h2>
-        <ul class="cd-cart-items">
-            <li>
-                <span class="cd-qty">1x</span> Product Name
-                <div class="cd-price">$9.99</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
+        <div id="st-container" class="st-container">
+            <nav class="st-menu st-effect-1" id="menu-1">
+                <h2 class="icon icon-lab">Sidebar</h2>
+                <ul data-menu="main" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
+                </ul>
+                <!-- Submenu 1 -->
+                <ul data-menu="submenu-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
+                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
+                </ul>
+                <!-- Submenu 1-1 -->
+                <ul data-menu="submenu-1-1" class="menu__level">
+                    <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a class="navbar-brand" href="/">
+            <img class="brand-logo center-block" src="/img/brand-logo.svg"/>
+        </a>
+    </div>
 
-            <li>
-                <span class="cd-qty">2x</span> Product Name
-                <div class="cd-price">$19.98</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
 
-            <li>
-                <span class="cd-qty">1x</span> Product Name
-                <div class="cd-price">$9.99</div>
-                <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-            </li>
-        </ul> <!-- cd-cart-items -->
+    <!--<header>-->
+        <!--<div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>-->
+    <!--</header>-->
+    <!--<div id="cd-cart">-->
+        <!--<h2>Cart</h2>-->
+        <!--<ul class="cd-cart-items">-->
+            <!--<li>-->
+                <!--<span class="cd-qty">1x</span> Product Name-->
+                <!--<div class="cd-price">$9.99</div>-->
+                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
+            <!--</li>-->
 
-        <div class="cd-cart-total">
-            <p>Total <span>$39.96</span></p>
-        </div> <!-- cd-cart-total -->
+            <!--<li>-->
+                <!--<span class="cd-qty">2x</span> Product Name-->
+                <!--<div class="cd-price">$19.98</div>-->
+                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
+            <!--</li>-->
 
-        <a href="#0" class="checkout-btn">Checkout</a>
+            <!--<li>-->
+                <!--<span class="cd-qty">1x</span> Product Name-->
+                <!--<div class="cd-price">$9.99</div>-->
+                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
+            <!--</li>-->
+        <!--</ul> &lt;!&ndash; cd-cart-items &ndash;&gt;-->
 
-    </div> <!-- cd-cart -->
+        <!--<div class="cd-cart-total">-->
+            <!--<p>Total <span>$39.96</span></p>-->
+        <!--</div> &lt;!&ndash; cd-cart-total &ndash;&gt;-->
+
+        <!--<a href="#0" class="checkout-btn">Checkout</a>-->
+
+    <!--</div> &lt;!&ndash; cd-cart &ndash;&gt;-->
 
 </nav>
