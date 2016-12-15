@@ -17,7 +17,6 @@
 		}
 		return e.parentNode && hasParentClass( e.parentNode, classname );
 	}
-
 	// http://coveroverflow.com/a/11381730/989439
 	function mobilecheck() {
 		var check = false;
@@ -26,9 +25,8 @@
 	}
 
 	function init() {
-
 		var container = document.getElementById( 'st-container' ),
-			buttons = Array.prototype.slice.call( document.querySelectorAll( '#st-trigger-effects > button' ) ),
+			buttons = Array.prototype.slice.call( document.querySelectorAll( '#st-trigger-effects > #slide-left' ) ),
 			// event type (if mobile use touch events)
 			eventtype = mobilecheck() ? 'touchstart' : 'click',
 			resetMenu = function() {
@@ -55,7 +53,6 @@
 				document.addEventListener( eventtype, bodyClickFn );
 			});
 		} );
-
 	}
 
 	init();
