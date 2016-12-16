@@ -19,69 +19,86 @@
         </div><!-- /st-pusher -->
 
         <div id="st-container" class="st-container">
-            <nav class="st-menu st-effect-1" id="menu-1">
+            <nav class="st-menu st-effect-1">
+                <!--<div class="close-container">-->
+                    <!--<button>CLOSE!!!!</button>-->
+                <!--</div>-->
+                <div id="menu-1">
+                    <ul data-menu="main" class="menu__level">
+                        {% for menu in site.navbar-menu %}
+                        <li class="menu__item">
+                            <a class="menu__link" data-submenu="submenu-{{ menu.id }}" href="#">{{ menu.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
 
-                <ul data-menu="main" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1" href="#">Vegetables</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-2" href="#">Fruits</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-3" href="#">Grains</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-4" href="#">Mylk &amp; Drinks</a></li>
-                </ul>
-                <!-- Submenu 1 -->
-                <ul data-menu="submenu-1" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#">Stalk Vegetables</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Roots &amp; Seeds</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Cabbages</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Salad Greens</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Mushrooms</a></li>
-                    <li class="menu__item"><a class="menu__link" data-submenu="submenu-1-1" href="#">Sale %</a></li>
-                </ul>
-                <!-- Submenu 1-1 -->
-                <ul data-menu="submenu-1-1" class="menu__level">
-                    <li class="menu__item"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Dried Veggies</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Our Brand</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Homemade</a></li>
-                </ul>
+                    <ul data-menu="submenu-1" class="menu__level">
+                        {% assign sorted-product = site.product | sort: "brand" %}
+                        {% for product in sorted-product | uniq %}
+                        {% if product.category == "cheek" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <h6>{{ product.brand }}</h6>
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul data-menu="submenu-2" class="menu__level">
+                        {% for product in site.product %}
+                        {% if product.category == "eye" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul data-menu="submenu-3" class="menu__level">
+                        {% for product in site.product %}
+                        {% if product.category == "face" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul data-menu="submenu-4" class="menu__level">
+                        {% for product in site.product %}
+                        {% if product.category == "lips" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul data-menu="submenu-5" class="menu__level">
+                        {% for product in site.product %}
+                        {% if product.category == "skin-care" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <ul data-menu="submenu-6" class="menu__level">
+                        {% for product in site.product %}
+                        {% if product.category == "tool" %}
+                        {% assign counter = counter | plus:1 %}
+                        <li class="menu__item">
+                            <a class="menu__link" href="{{ product.url }}">{{ product.product-name }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
             </nav>
         </div>
         <a class="navbar-brand" href="/">
             <img class="brand-logo center-block" src="/img/brand-logo.svg"/>
         </a>
     </div>
-
-
-    <!--<header>-->
-        <!--<div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>-->
-    <!--</header>-->
-    <!--<div id="cd-cart">-->
-        <!--<h2>Cart</h2>-->
-        <!--<ul class="cd-cart-items">-->
-            <!--<li>-->
-                <!--<span class="cd-qty">1x</span> Product Name-->
-                <!--<div class="cd-price">$9.99</div>-->
-                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<span class="cd-qty">2x</span> Product Name-->
-                <!--<div class="cd-price">$19.98</div>-->
-                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<span class="cd-qty">1x</span> Product Name-->
-                <!--<div class="cd-price">$9.99</div>-->
-                <!--<a href="#0" class="cd-item-remove cd-img-replace">Remove</a>-->
-            <!--</li>-->
-        <!--</ul> &lt;!&ndash; cd-cart-items &ndash;&gt;-->
-
-        <!--<div class="cd-cart-total">-->
-            <!--<p>Total <span>$39.96</span></p>-->
-        <!--</div> &lt;!&ndash; cd-cart-total &ndash;&gt;-->
-
-        <!--<a href="#0" class="checkout-btn">Checkout</a>-->
-
-    <!--</div> &lt;!&ndash; cd-cart &ndash;&gt;-->
-
 </nav>

@@ -225,25 +225,27 @@ nav
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.1)
     font-weight: 300
     font-size: 2em
-  ul li
-    a
-      display: block
-      padding: 1em 1em 1em 1.2em
-      outline: none
-      box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
-      color: #f3efe0
-      text-transform: uppercase
-      text-shadow: 0 0 1px rgba(255, 255, 255, 0.1)
-      letter-spacing: 1px
-      font-weight: 400
-      -webkit-transition: background 0.3s, box-shadow 0.3s
-      transition: background 0.3s, box-shadow 0.3s
-    &:first-child a
-      box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2)
-    a:hover
-      background: rgba(0, 0, 0, 0.2)
-      box-shadow: inset 0 -1px rgba(0, 0, 0, 0)
-      color: #fff
+  ul
+    li
+      a
+        font-size: 14px
+        display: block
+        padding: 1em 1em 1em 1.2em
+        outline: none
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
+        color: #f3efe0
+        text-transform: uppercase
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.1)
+        letter-spacing: 1px
+        font-weight: 400
+        -webkit-transition: background 0.3s, box-shadow 0.3s
+        transition: background 0.3s, box-shadow 0.3s
+      &:first-child a
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2)
+      a:hover
+        background: rgba(0, 0, 0, 0.2)
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0)
+        color: #fff
 
 //Slide left effect
 /* Effect 1: Slide in on top
@@ -297,6 +299,8 @@ nav
 /* Menu styles
 
 
+.menu__breadcrumbs
+  text-align: left
 .menu__level
   position: absolute
   bottom: 0
@@ -316,6 +320,7 @@ nav
 .menu__item
   display: block
   width: 100%
+  text-align: left
 
 .menu__link
   font-weight: 600

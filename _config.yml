@@ -18,25 +18,31 @@ navbar-menu:
 #  - title: Accessories
 #    slug-link: accessories
 
-  - title: Cheeks
+  - id: 1
+    title: Cheeks
     slug-link: cheek
 
-  - title: Eyes
+  - id: 2
+    title: Eyes
     slug-link: eye
 
-  - title: Face
+  - id: 3
+    title: Face
     slug-link: face
 
-  - title: Lips
+  - id: 4
+    title: Lips
     slug-link: lips
 
 #  - title: Makeup Bags
 #    slug-link: makeupbag
 
-  - title: Skin Care
+  - id: 5
+    title: Skin Care
     slug-link: skin-care
 
-  - title: "Tools & Brushes"
+  - id: 6
+    title: "Tools & Brushes"
     slug-link: tool
 
 
